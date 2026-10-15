@@ -5,10 +5,12 @@
   "pipelineConclusion": "success",
   "testsPassed": 11,
   "readmeImagesLoaded": 17,
-  "relativeLinksChecked": 127,
+  "relativeLinksChecked": 128,
   "liveTerminalCommandsPassed": 51,
   "azureResourcesRemaining": 0,
   "azureResourceGroupExists": false,
-  "walkthroughSeconds": 360.56,
-  "originalCoursework": "retained; no files cut or deleted"
+  "walkthroughSeconds": 381.0,
+  "originalCoursework": "retained; no files cut or deleted",
+  "walkthroughChapters": 13,
+  "publicReadmeImagesLoaded": 17
 }

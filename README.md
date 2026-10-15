@@ -196,4 +196,4 @@ The isolated Compose project started from an empty volume, rebuilt both applicat
 
 Terraform destroyed all nine resources. Azure returned `false` for the resource-group existence check; the SSH tunnel and monitoring forwards have stopped. The cloud URL is no longer hosted.
 
-[Six-minute walkthrough and chapters](WALKTHROUGH.md) · [Video](screenshots/capstone-walkthrough.mp4) · [Image archive checksum](screenshots/release-images.json) · [Pipeline metadata](screenshots/standalone-ci-run.json)
+[Recorded walkthrough and chapters](WALKTHROUGH.md) · [Video](screenshots/capstone-walkthrough.mp4) · [Image archive checksum](screenshots/release-images.json) · [Pipeline metadata](screenshots/standalone-ci-run.json)

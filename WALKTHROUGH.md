@@ -14,7 +14,8 @@ The publication recording starts with the initial repository push. The first sta
 | 02:34 | CPU load and scaling on Azure | [Recording](screenshots/terminal/cloud-hpa.webm) |
 | 03:21 | Broken image and Service recovery on Azure | [Recording](screenshots/terminal/cloud-troubleshooting.webm) |
 | 03:37 | Prometheus and Grafana on Azure | [Recording](screenshots/terminal/cloud-monitoring-browser.webm) |
-| 03:48 | Successful standalone pipeline | [Recording](screenshots/terminal/github-actions.webm) |
-| 03:58 | Deploy the approved images and verify PostgreSQL | [Recording](screenshots/terminal/cloud-upgrade.webm) |
-| 05:09 | Updated frontend with the existing assignment | [Recording](screenshots/terminal/cloud-after.webm) |
-| 05:14 | Destroy the temporary Azure resources (3x) | [Recording](screenshots/terminal/azure-cleanup.webm) |
+| 03:48 | Kubernetes, Helm, logs and GitOps status | [Recording](screenshots/terminal/cluster.webm) |
+| 04:09 | Successful standalone pipeline | [Recording](screenshots/terminal/github-actions.webm) |
+| 04:18 | Deploy the approved images and verify PostgreSQL | [Recording](screenshots/terminal/cloud-upgrade.webm) |
+| 05:29 | Updated frontend with the existing assignment | [Recording](screenshots/terminal/cloud-after.webm) |
+| 05:34 | Destroy the temporary Azure resources (3x) | [Recording](screenshots/terminal/azure-cleanup.webm) |

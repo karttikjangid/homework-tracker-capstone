@@ -1,5 +1,5 @@
 {
-  "durationSeconds": 360.55999999999995,
+  "durationSeconds": 380.99999999999994,
   "chapters": [
     {
       "time": "00:00",
@@ -43,21 +43,26 @@
     },
     {
       "time": "03:48",
+      "title": "Kubernetes, Helm, logs and GitOps status",
+      "source": "screenshots/terminal/cluster.webm"
+    },
+    {
+      "time": "04:09",
       "title": "Successful standalone pipeline",
       "source": "screenshots/terminal/github-actions.webm"
     },
     {
-      "time": "03:58",
+      "time": "04:18",
       "title": "Deploy the approved images and verify PostgreSQL",
       "source": "screenshots/terminal/cloud-upgrade.webm"
     },
     {
-      "time": "05:09",
+      "time": "05:29",
       "title": "Updated frontend with the existing assignment",
       "source": "screenshots/terminal/cloud-after.webm"
     },
     {
-      "time": "05:14",
+      "time": "05:34",
       "title": "Destroy the temporary Azure resources (3x)",
       "source": "screenshots/terminal/azure-cleanup.webm"
     }
