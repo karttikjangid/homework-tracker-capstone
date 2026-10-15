@@ -1,6 +1,6 @@
 # Session 21 requirements cross-check
 
-Sources checked read-only: the [course homework document](https://docs.google.com/document/d/1cjXFYf2Thm8cBEN-0C48B-v02cj3jGLd47lcO18prHE/edit), Session 21's [instructor brief](https://github.com/Nency-Ravaliya/devops-heros/tree/main/session21-python), and [grading rubric](GRADING.md).
+Sources checked read-only: the [course homework document](https://docs.google.com/document/d/1cjXFYf2Thm8cBEN-0C48B-v02cj3jGLd47lcO18prHE/edit), Session 21's [instructor brief](https://github.com/Nency-Ravaliya/devops-heros/tree/main/session21-python), and [grading rubric](grading.md).
 
 The course document requires the complete DevOps flow, Terraform cloud infrastructure, Kubernetes resources, security gates, monitoring, GitOps, troubleshooting and screenshots. The capstone has its own repository, with the application and delivery components at its root. It was copied from the coursework repository; the original work is retained.
 
