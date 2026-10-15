@@ -1,0 +1,58 @@
+[
+  {
+    "name": "kubernetes-pods",
+    "command": "kubectl -n session21 get pods -o wide",
+    "started": "2026-10-15T21:53:51.373Z",
+    "finished": "2026-10-15T21:53:51.905Z",
+    "exitCode": 0,
+    "expected": 0
+  },
+  {
+    "name": "kubernetes-services",
+    "command": "kubectl -n session21 get svc,ingress,pvc",
+    "started": "2026-10-15T21:53:54.041Z",
+    "finished": "2026-10-15T21:53:54.553Z",
+    "exitCode": 0,
+    "expected": 0
+  },
+  {
+    "name": "helm",
+    "command": "helm list -n session21 && helm status homework -n session21",
+    "started": "2026-10-15T21:53:56.814Z",
+    "finished": "2026-10-15T21:53:57.508Z",
+    "exitCode": 0,
+    "expected": 0
+  },
+  {
+    "name": "logs",
+    "command": "kubectl -n session21 logs deployment/homework-backend --tail=12",
+    "started": "2026-10-15T21:53:59.773Z",
+    "finished": "2026-10-15T21:54:00.292Z",
+    "exitCode": 0,
+    "expected": 0
+  },
+  {
+    "name": "kubernetes-metrics",
+    "command": "curl -fsS http://localhost:8000/metrics | grep -E 'http_requests_total|process_resident_memory_bytes'",
+    "started": "2026-10-15T21:54:02.554Z",
+    "finished": "2026-10-15T21:54:03.071Z",
+    "exitCode": 0,
+    "expected": 0
+  },
+  {
+    "name": "gitops",
+    "command": "kubectl -n argocd get application session21 && kubectl -n session21-gitops get pods,svc",
+    "started": "2026-10-15T21:54:05.332Z",
+    "finished": "2026-10-15T21:54:06.017Z",
+    "exitCode": 0,
+    "expected": 0
+  },
+  {
+    "name": "image-release",
+    "command": "kubectl -n session21 get deployments -o custom-columns='NAME:.metadata.name,IMAGE:.spec.template.spec.containers[*].image,READY:.status.readyReplicas'",
+    "started": "2026-10-15T21:54:08.277Z",
+    "finished": "2026-10-15T21:54:08.783Z",
+    "exitCode": 0,
+    "expected": 0
+  }
+]

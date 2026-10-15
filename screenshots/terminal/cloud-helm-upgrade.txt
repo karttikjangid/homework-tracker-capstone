@@ -1,0 +1,55 @@
+Kartiks-MacBook-Air:capstone $ helm upgrade homework ./helm/taskboard -n session21 --set ingress.className=traefik --set ingress.host='' --wait --timeout 240s
+Release "homework" has been upgraded. Happy Helming!
+NAME: homework
+LAST DEPLOYED: Fri Oct 16 03:25:04 2026
+NAMESPACE: session21
+STATUS: deployed
+REVISION: 2
+DESCRIPTION: Upgrade complete
+TEST SUITE: None
+Kartiks-MacBook-Air:capstone $ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

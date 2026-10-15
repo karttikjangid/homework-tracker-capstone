@@ -1,0 +1,10 @@
+[
+  {
+    "name": "ssh-firewall-update",
+    "command": "terraform apply -input=false -auto-approve -no-color",
+    "started": "2026-10-15T21:23:57.935Z",
+    "finished": "2026-10-15T21:24:33.495Z",
+    "exitCode": 0,
+    "expected": 0
+  }
+]

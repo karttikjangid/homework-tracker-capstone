@@ -23,7 +23,7 @@ State files, keys and personal variable files stay out of Git.
 
 ## Connect to K3s for a presentation
 
-This is an optional replay that creates billable resources. Use the same small VM, collect the demo, then destroy it. The 15 October review did not provision another VM.
+These commands create billable resources. Use one small VM, collect the demonstration, then destroy it. The final live terminal recording includes the provision and cleanup steps.
 
 After `terraform apply`, from this directory set `SSH_KEY` to the private key matching `ssh_public_key_path`:
 
@@ -50,7 +50,7 @@ helm upgrade --install homework ./helm/taskboard -n session21 --create-namespace
 kubectl -n session21 get pods,svc,ingress,hpa,pvc
 ```
 
-The chart's SHA tags identify the reviewed release. To demonstrate an update, override both image tags with the successful pipeline's SHA. Open `http://<VM_IP>` to check Ingress. Port 6443 stays private; the tunnel uses the allowed SSH connection.
+The chart's SHA tags identify the reviewed release published by this standalone repository. To demonstrate an update, override both image tags with the successful pipeline's SHA. Open `http://<VM_IP>` to check Ingress. Port 6443 stays private; the tunnel uses the allowed SSH connection.
 
 The copied kubeconfig contains cluster-admin credentials. Keep it outside Git. Follow the [K3s cluster-access documentation](https://docs.k3s.io/cluster-access) when refreshing it.
 

@@ -1,0 +1,18 @@
+[
+  {
+    "name": "git-review",
+    "command": "git status --short && git diff --stat && git log -5 --oneline",
+    "started": "2026-10-15T21:32:41.249Z",
+    "finished": "2026-10-15T21:32:41.744Z",
+    "exitCode": 0,
+    "expected": 0
+  },
+  {
+    "name": "git-publish",
+    "command": "git add README.md SUBMISSION.md REQUIREMENTS.md .github frontend/src/main.jsx gitops terraform/README.md scripts/capture-terminal.cjs scripts/terminal-scenes.json && git commit -m \"Publish standalone Homework Tracker capstone\" && git push -u origin main",
+    "started": "2026-10-15T21:32:44.009Z",
+    "finished": "2026-10-15T21:32:53.117Z",
+    "exitCode": 0,
+    "expected": 0
+  }
+]

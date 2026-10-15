@@ -1,0 +1,55 @@
+runnervm8k3b6:homework-tracker-capstone $ kubectl -n session21 get svc,ingress,pvc
+NAME                        TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
+service/backend             ClusterIP   10.96.133.121   <none>        8000/TCP   4m58s
+service/homework-frontend   ClusterIP   10.96.230.89    <none>        80/TCP     4m58s
+service/postgres            ClusterIP   10.96.159.64    <none>        5432/TCP   4m58s
+
+NAME                                 CLASS     HOSTS   ADDRESS   PORTS   AGE
+ingress.networking.k8s.io/homework   traefik   *                 80      4m58s
+
+NAME                                  STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE
+persistentvolumeclaim/postgres-data   Bound    pvc-102afbbf-6b08-4502-b6da-60d5df3c00b4   1Gi        RWO            standard       <unset>                 4m58s
+runnervm8k3b6:homework-tracker-capstone $ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

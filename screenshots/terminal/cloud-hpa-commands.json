@@ -1,0 +1,18 @@
+[
+  {
+    "name": "cloud-hpa-load",
+    "command": "bash scripts/test-hpa.sh",
+    "started": "2026-10-15T21:45:42.681Z",
+    "finished": "2026-10-15T21:46:23.992Z",
+    "exitCode": 0,
+    "expected": 0
+  },
+  {
+    "name": "cloud-hpa-pods",
+    "command": "kubectl -n session21 get hpa,pods && kubectl -n session21 top pods",
+    "started": "2026-10-15T21:46:26.272Z",
+    "finished": "2026-10-15T21:46:27.234Z",
+    "exitCode": 0,
+    "expected": 0
+  }
+]

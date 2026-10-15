@@ -1,0 +1,55 @@
+Kartiks-MacBook-Air:capstone $ kubectl -n session21-monitoring get pods,svc && kubectl -n session21 top pods && kubectl -n session21 logs deployment/homework-backend --tai
+l=8
+NAME                                               READY   STATUS    RESTARTS   AGE
+pod/session21-grafana-568fcc8d4b-vvt4j             1/1     Running   0          58s
+pod/session21-prometheus-server-7747c67744-t9g6n   2/2     Running   0          103s
+
+NAME                                  TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE
+service/session21-grafana             ClusterIP   10.43.210.183   <none>        80/TCP    58s
+service/session21-prometheus-server   ClusterIP   10.43.90.245    <none>        80/TCP    103s
+NAME                                 CPU(cores)   MEMORY(bytes)   
+homework-backend-f4dcf97d9-fd5mx     1m           62Mi            
+homework-backend-f4dcf97d9-scwcs     2m           62Mi            
+homework-frontend-778d68bbd5-2lg8q   1m           3Mi             
+homework-frontend-778d68bbd5-c78vb   1m           3Mi             
+postgres-cf49944ff-7x7sh             3m           37Mi            
+Found 2 pods, using pod/homework-backend-f4dcf97d9-fd5mx
+Defaulted container "backend" out of: backend, wait-postgres (init)
+INFO:     10.42.0.1:37076 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.42.0.1:38952 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.42.0.1:48406 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.42.0.1:48418 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.42.0.1:60008 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.42.0.1:60018 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.42.0.1:37416 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.42.0.1:51570 - "GET /health HTTP/1.1" 200 OK
+Kartiks-MacBook-Air:capstone $ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,55 @@
+Kartiks-MacBook-Air:azure-terraform $ terraform plan -input=false -no-color -out=capstone-final.tfplan | tee /tmp/session21-final-plan.txt | tail -n 30
+      + virtual_network_name                          = "homework-vnet"
+    }
+
+  # azurerm_virtual_network.homework will be created
+  + resource "azurerm_virtual_network" "homework" {
+      + address_space                  = [
+          + "10.21.0.0/16",
+        ]
+      + dns_servers                    = (known after apply)
+      + guid                           = (known after apply)
+      + id                             = (known after apply)
+      + location                       = "centralindia"
+      + name                           = "homework-vnet"
+      + private_endpoint_vnet_policies = "Disabled"
+      + resource_group_name            = "session21-homework"
+      + subnet                         = (known after apply)
+    }
+
+Plan: 9 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  + public_ip      = (known after apply)
+  + resource_group = "session21-homework"
+
+─────────────────────────────────────────────────────────────────────────────
+
+Saved the plan to: capstone-final.tfplan
+
+To perform exactly these actions, run the following command to apply:
+    terraform apply "capstone-final.tfplan"
+Kartiks-MacBook-Air:azure-terraform $ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

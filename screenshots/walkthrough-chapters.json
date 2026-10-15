@@ -1,0 +1,65 @@
+{
+  "durationSeconds": 360.55999999999995,
+  "chapters": [
+    {
+      "time": "00:00",
+      "title": "Azure infrastructure provision (3x)",
+      "source": "screenshots/terminal/azure-provision.webm"
+    },
+    {
+      "time": "00:52",
+      "title": "Kubernetes and initial Helm release (2x)",
+      "source": "screenshots/terminal/cloud-baseline.webm"
+    },
+    {
+      "time": "01:37",
+      "title": "Create an assignment and check persistence",
+      "source": "screenshots/terminal/cloud-before.webm"
+    },
+    {
+      "time": "01:43",
+      "title": "Commit and publish the application change",
+      "source": "screenshots/terminal/git-publish.webm"
+    },
+    {
+      "time": "01:57",
+      "title": "Tests, clean Compose run and API checks (1.5x)",
+      "source": "screenshots/terminal/compose.webm"
+    },
+    {
+      "time": "02:34",
+      "title": "CPU load and scaling on Azure",
+      "source": "screenshots/terminal/cloud-hpa.webm"
+    },
+    {
+      "time": "03:21",
+      "title": "Broken image and Service recovery on Azure",
+      "source": "screenshots/terminal/cloud-troubleshooting.webm"
+    },
+    {
+      "time": "03:37",
+      "title": "Prometheus and Grafana on Azure",
+      "source": "screenshots/terminal/cloud-monitoring-browser.webm"
+    },
+    {
+      "time": "03:48",
+      "title": "Successful standalone pipeline",
+      "source": "screenshots/terminal/github-actions.webm"
+    },
+    {
+      "time": "03:58",
+      "title": "Deploy the approved images and verify PostgreSQL",
+      "source": "screenshots/terminal/cloud-upgrade.webm"
+    },
+    {
+      "time": "05:09",
+      "title": "Updated frontend with the existing assignment",
+      "source": "screenshots/terminal/cloud-after.webm"
+    },
+    {
+      "time": "05:14",
+      "title": "Destroy the temporary Azure resources (3x)",
+      "source": "screenshots/terminal/azure-cleanup.webm"
+    }
+  ]
+}

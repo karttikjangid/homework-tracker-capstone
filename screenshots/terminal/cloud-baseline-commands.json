@@ -1,0 +1,58 @@
+[
+  {
+    "name": "azure-vm-current",
+    "command": "az vm show -g session21-homework -n session21-homework -d --query '{name:name,size:hardwareProfile.vmSize,power:powerState,ip:publicIps}' -o table",
+    "started": "2026-10-15T21:25:23.931Z",
+    "finished": "2026-10-15T21:25:27.286Z",
+    "exitCode": 0,
+    "expected": 0
+  },
+  {
+    "name": "k3s-ready",
+    "command": "ssh -i \"$CAPSTONE_SSH_KEY\" -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=\"$CAPSTONE_KNOWN_HOSTS\" -o ConnectTimeout=15 -o BatchMode=yes student@\"$CAPSTONE_VM_IP\" 'sudo cloud-init status --wait && sudo k3s kubectl get nodes'",
+    "started": "2026-10-15T21:25:29.549Z",
+    "finished": "2026-10-15T21:25:30.948Z",
+    "exitCode": 0,
+    "expected": 0
+  },
+  {
+    "name": "kubeconfig-tunnel",
+    "command": "umask 077; ssh -i \"$CAPSTONE_SSH_KEY\" -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=\"$CAPSTONE_KNOWN_HOSTS\" -o ConnectTimeout=15 -o BatchMode=yes student@\"$CAPSTONE_VM_IP\" 'sudo cat /etc/rancher/k3s/k3s.yaml' | sed 's/127.0.0.1:6443/127.0.0.1:18443/' > \"$KUBECONFIG\" && ssh -i \"$CAPSTONE_SSH_KEY\" -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=\"$CAPSTONE_KNOWN_HOSTS\" -o ConnectTimeout=15 -o BatchMode=yes -o ExitOnForwardFailure=yes -fN -L 18443:127.0.0.1:6443 student@\"$CAPSTONE_VM_IP\"",
+    "started": "2026-10-15T21:25:33.211Z",
+    "finished": "2026-10-15T21:25:34.762Z",
+    "exitCode": 0,
+    "expected": 0
+  },
+  {
+    "name": "cloud-nodes",
+    "command": "kubectl get nodes -o wide",
+    "started": "2026-10-15T21:25:37.025Z",
+    "finished": "2026-10-15T21:25:38.015Z",
+    "exitCode": 0,
+    "expected": 0
+  },
+  {
+    "name": "cloud-helm-install",
+    "command": "helm upgrade --install homework ./helm/taskboard -n session21 --create-namespace --set ingress.className=traefik --set ingress.host='' --wait --timeout 240s",
+    "started": "2026-10-15T21:25:40.276Z",
+    "finished": "2026-10-15T21:26:43.945Z",
+    "exitCode": 0,
+    "expected": 0
+  },
+  {
+    "name": "cloud-running",
+    "command": "kubectl -n session21 get pods,svc,ingress,hpa,pvc && helm list -n session21",
+    "started": "2026-10-15T21:26:46.202Z",
+    "finished": "2026-10-15T21:26:47.433Z",
+    "exitCode": 0,
+    "expected": 0
+  },
+  {
+    "name": "cloud-api-before",
+    "command": "curl -fsS -i http://$CAPSTONE_VM_IP/health && curl -fsS http://$CAPSTONE_VM_IP/api/tasks",
+    "started": "2026-10-15T21:26:49.689Z",
+    "finished": "2026-10-15T21:26:50.310Z",
+    "exitCode": 0,
+    "expected": 0
+  }
+]

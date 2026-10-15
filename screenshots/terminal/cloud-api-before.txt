@@ -1,0 +1,55 @@
+Kartiks-MacBook-Air:session21-python $ curl -fsS -i http://$CAPSTONE_VM_IP/health && curl -fsS http://$CAPSTONE_VM_IP/api/tasks
+HTTP/1.1 200 OK
+Content-Length: 15
+Content-Type: application/json
+Date: Thu, 15 Oct 2026 21:26:49 GMT
+Server: nginx/1.30.6
+Vary: Origin
+
+{"status":"UP"}[]Kartiks-MacBook-Air:session21-python $ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

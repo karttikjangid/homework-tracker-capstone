@@ -1,0 +1,55 @@
+Kartiks-MacBook-Air:capstone $ curl -fsS -i http://20.204.56.74/health && curl -fsS http://20.204.56.74/api/tasks && kubectl -n session21 exec deployment/homework-frontend
+ -- wget -T 5 -qO- http://backend:8000/ready && kubectl -n session21 exec deployment/postgres -- psql -U taskboard -d taskboard -c "SELECT title,session_number,due_date,st
+atus FROM tasks; SELECT version_num FROM alembic_version;"
+HTTP/1.1 200 OK
+Content-Length: 15
+Content-Type: application/json
+Date: Thu, 15 Oct 2026 21:56:05 GMT
+Server: nginx/1.30.6
+Vary: Origin
+
+{"status":"UP"}[{"title":"Complete the DevOps capstone","description":"Azure, CI/CD, Kubernetes, security and GitOps demonstration.","priority":"LOW","status":"IN_PROGRESS
+","assignee":"Kartik","session_number":21,"due_date":"2026-10-16","id":1,"created_at":"2026-10-15T21:29:21.147273Z"}]{"status":"READY"}            title             | sess
+ion_number |  due_date  |   status    
+------------------------------+----------------+------------+-------------
+ Complete the DevOps capstone |             21 | 2026-10-16 | IN_PROGRESS
+(1 row)
+
+       version_num       
+-------------------------
+ 0002_assignment_details
+(1 row)
+
+Kartiks-MacBook-Air:capstone $ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

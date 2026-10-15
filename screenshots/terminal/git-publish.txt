@@ -1,0 +1,55 @@
+Kartiks-MacBook-Air:capstone $ git add README.md SUBMISSION.md REQUIREMENTS.md .github frontend/src/main.jsx gitops terraform/README.md scripts/capture-terminal.cjs script
+s/terminal-scenes.json && git commit -m "Publish standalone Homework Tracker capstone" && git push -u origin main
+[main e8c4afa] Publish standalone Homework Tracker capstone
+ 10 files changed, 457 insertions(+), 291 deletions(-)
+ create mode 100644 .github/workflows/ci-cd.yml
+ create mode 100644 REQUIREMENTS.md
+ create mode 100644 scripts/capture-terminal.cjs
+ create mode 100644 scripts/terminal-scenes.json
+Enumerating objects: 441, done.
+Counting objects: 100% (441/441), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (337/337), done.
+Writing objects: 100% (441/441), 24.14 MiB | 7.94 MiB/s, done.
+Total 441 (delta 140), reused 284 (delta 76), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (140/140), done.
+To https://github.com/karttikjangid/homework-tracker-capstone.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+Kartiks-MacBook-Air:capstone $ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

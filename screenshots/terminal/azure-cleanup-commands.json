@@ -1,0 +1,18 @@
+[
+  {
+    "name": "terraform-destroy",
+    "command": "terraform destroy -auto-approve -input=false -no-color",
+    "started": "2026-10-15T21:56:53.056Z",
+    "finished": "2026-10-15T21:59:03.029Z",
+    "exitCode": 0,
+    "expected": 0
+  },
+  {
+    "name": "azure-cleanup",
+    "command": "az group exists --name session21-homework && terraform state list && test \"$(az group exists --name session21-homework)\" = false",
+    "started": "2026-10-15T21:59:05.292Z",
+    "finished": "2026-10-15T21:59:07.902Z",
+    "exitCode": 0,
+    "expected": 0
+  }
+]

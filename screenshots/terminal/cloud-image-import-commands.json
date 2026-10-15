@@ -1,0 +1,18 @@
+[
+  {
+    "name": "cloud-image-transfer",
+    "command": "scp -i \"$CAPSTONE_SSH_KEY\" -o UserKnownHostsFile=\"$CAPSTONE_KNOWN_HOSTS\" -o StrictHostKeyChecking=yes -o ConnectTimeout=15 -o BatchMode=yes \"$CAPSTONE_IMAGES\" student@\"$CAPSTONE_VM_IP\":/tmp/homework-tracker-images.tar.gz",
+    "started": "2026-10-15T21:39:08.902Z",
+    "finished": "2026-10-15T21:39:18.775Z",
+    "exitCode": 0,
+    "expected": 0
+  },
+  {
+    "name": "cloud-image-import",
+    "command": "ssh -i \"$CAPSTONE_SSH_KEY\" -o UserKnownHostsFile=\"$CAPSTONE_KNOWN_HOSTS\" -o StrictHostKeyChecking=yes -o ConnectTimeout=15 -o BatchMode=yes student@\"$CAPSTONE_VM_IP\" 'sudo k3s ctr -n k8s.io images import /tmp/homework-tracker-images.tar.gz && sudo k3s ctr -n k8s.io images ls | grep homework-tracker'",
+    "started": "2026-10-15T21:39:21.037Z",
+    "finished": "2026-10-15T21:39:30.452Z",
+    "exitCode": 0,
+    "expected": 0
+  }
+]

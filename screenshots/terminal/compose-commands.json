@@ -1,0 +1,90 @@
+[
+  {
+    "name": "pytest",
+    "command": "python -m pytest -v backend/tests",
+    "started": "2026-10-15T21:46:05.577Z",
+    "finished": "2026-10-15T21:46:08.534Z",
+    "exitCode": 0,
+    "expected": 0
+  },
+  {
+    "name": "compose-clean",
+    "command": "docker compose -p session21-evidence down -v --remove-orphans",
+    "started": "2026-10-15T21:46:10.794Z",
+    "finished": "2026-10-15T21:46:11.447Z",
+    "exitCode": 0,
+    "expected": 0
+  },
+  {
+    "name": "compose-build",
+    "command": "docker compose -p session21-evidence up -d --build --wait --wait-timeout 120",
+    "started": "2026-10-15T21:46:13.713Z",
+    "finished": "2026-10-15T21:46:35.163Z",
+    "exitCode": 0,
+    "expected": 0
+  },
+  {
+    "name": "compose-ps",
+    "command": "docker compose -p session21-evidence ps",
+    "started": "2026-10-15T21:46:37.425Z",
+    "finished": "2026-10-15T21:46:38.221Z",
+    "exitCode": 0,
+    "expected": 0
+  },
+  {
+    "name": "api-health",
+    "command": "curl -fsS -i http://localhost:8000/health && curl -fsS -i http://localhost:8000/ready",
+    "started": "2026-10-15T21:46:40.357Z",
+    "finished": "2026-10-15T21:46:40.888Z",
+    "exitCode": 0,
+    "expected": 0
+  },
+  {
+    "name": "api-create",
+    "command": "curl -fsS -i -X POST http://localhost:8000/api/tasks -H 'Content-Type: application/json' -d '{\"title\":\"Capstone terminal demonstration\",\"session_number\":21,\"due_date\":\"2026-10-16\",\"assignee\":\"Kartik\",\"priority\":\"HIGH\"}'",
+    "started": "2026-10-15T21:46:43.149Z",
+    "finished": "2026-10-15T21:46:43.651Z",
+    "exitCode": 0,
+    "expected": 0
+  },
+  {
+    "name": "api-read-update",
+    "command": "TASK_ID=$(curl -fsS http://localhost:8000/api/tasks | python -c 'import json,sys; print(json.load(sys.stdin)[0][\"id\"])'); curl -fsS -i http://localhost:8000/api/tasks/$TASK_ID && curl -fsS -i -X PUT http://localhost:8000/api/tasks/$TASK_ID -H 'Content-Type: application/json' -d '{\"status\":\"DONE\"}'",
+    "started": "2026-10-15T21:46:45.913Z",
+    "finished": "2026-10-15T21:46:46.423Z",
+    "exitCode": 0,
+    "expected": 0
+  },
+  {
+    "name": "database",
+    "command": "docker compose -p session21-evidence exec -T postgres psql -U taskboard -d taskboard -c 'SELECT title, session_number, due_date, status FROM tasks; SELECT version_num FROM alembic_version;'",
+    "started": "2026-10-15T21:46:48.685Z",
+    "finished": "2026-10-15T21:46:49.207Z",
+    "exitCode": 0,
+    "expected": 0
+  },
+  {
+    "name": "api-stats-delete",
+    "command": "curl -fsS -i http://localhost:8000/api/tasks/stats && curl -fsS -i -X DELETE http://localhost:8000/api/tasks/$TASK_ID",
+    "started": "2026-10-15T21:46:51.468Z",
+    "finished": "2026-10-15T21:46:51.984Z",
+    "exitCode": 0,
+    "expected": 0
+  },
+  {
+    "name": "metrics",
+    "command": "curl -fsS http://localhost:8000/metrics | grep -E 'http_requests_total|process_resident_memory_bytes|http_request_duration_seconds_count'",
+    "started": "2026-10-15T21:46:54.245Z",
+    "finished": "2026-10-15T21:46:54.767Z",
+    "exitCode": 0,
+    "expected": 0
+  },
+  {
+    "name": "non-root",
+    "command": "docker compose -p session21-evidence exec -T backend id && docker compose -p session21-evidence exec -T frontend id",
+    "started": "2026-10-15T21:46:57.029Z",
+    "finished": "2026-10-15T21:46:57.679Z",
+    "exitCode": 0,
+    "expected": 0
+  }
+]

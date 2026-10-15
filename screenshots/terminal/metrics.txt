@@ -1,0 +1,55 @@
+runnervm8k3b6:homework-tracker-capstone $ curl -fsS http://localhost:8000/metrics | grep -E 'http_requests_total|process_resident_memory_bytes|http_request_duration_second
+s_count'
+# HELP process_resident_memory_bytes Resident memory size in bytes.
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes 8.8297472e+07
+# HELP http_requests_total Total number of requests by method, status and handler.
+# TYPE http_requests_total counter
+http_requests_total{handler="/ready",method="GET",status="2xx"} 8.0
+http_requests_total{handler="/health",method="GET",status="2xx"} 8.0
+http_requests_total{handler="/api/tasks",method="POST",status="2xx"} 1.0
+http_requests_total{handler="/api/tasks",method="GET",status="2xx"} 1.0
+http_requests_total{handler="/api/tasks/{task_id}",method="GET",status="2xx"} 1.0
+http_requests_total{handler="/api/tasks/{task_id}",method="PUT",status="2xx"} 1.0
+http_requests_total{handler="/api/tasks/stats",method="GET",status="2xx"} 1.0
+http_requests_total{handler="/api/tasks/{task_id}",method="DELETE",status="2xx"} 1.0
+http_request_duration_seconds_count{handler="/ready",method="GET"} 8.0
+http_request_duration_seconds_count{handler="/health",method="GET"} 8.0
+http_request_duration_seconds_count{handler="/api/tasks",method="POST"} 1.0
+http_request_duration_seconds_count{handler="/api/tasks",method="GET"} 1.0
+http_request_duration_seconds_count{handler="/api/tasks/{task_id}",method="GET"} 1.0
+http_request_duration_seconds_count{handler="/api/tasks/{task_id}",method="PUT"} 1.0
+http_request_duration_seconds_count{handler="/api/tasks/stats",method="GET"} 1.0
+http_request_duration_seconds_count{handler="/api/tasks/{task_id}",method="DELETE"} 1.0
+runnervm8k3b6:homework-tracker-capstone $ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

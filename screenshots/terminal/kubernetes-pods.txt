@@ -1,0 +1,55 @@
+runnervm8k3b6:homework-tracker-capstone $ kubectl -n session21 get pods -o wide
+NAME                                READY   STATUS    RESTARTS   AGE     IP            NODE                          NOMINATED NODE   READINESS GATES
+homework-backend-5c65c7f447-7pwpm   1/1     Running   0          4m55s   10.244.0.11   chart-testing-control-plane   <none>           <none>
+homework-backend-5c65c7f447-ds2rm   1/1     Running   0          3m40s   10.244.0.15   chart-testing-control-plane   <none>           <none>
+homework-backend-5c65c7f447-fmhmx   1/1     Running   0          3m40s   10.244.0.16   chart-testing-control-plane   <none>           <none>
+homework-backend-5c65c7f447-m9fz9   1/1     Running   0          4m55s   10.244.0.9    chart-testing-control-plane   <none>           <none>
+homework-frontend-8c769556f-6jtck   1/1     Running   0          4m55s   10.244.0.10   chart-testing-control-plane   <none>           <none>
+homework-frontend-8c769556f-79zzj   1/1     Running   0          4m55s   10.244.0.8    chart-testing-control-plane   <none>           <none>
+postgres-7989d56484-28tbw           1/1     Running   0          4m55s   10.244.0.13   chart-testing-control-plane   <none>           <none>
+runnervm8k3b6:homework-tracker-capstone $ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

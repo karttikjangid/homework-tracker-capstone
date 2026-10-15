@@ -1,0 +1,55 @@
+runnervm8k3b6:homework-tracker-capstone $ kubectl -n session21 logs deployment/homework-backend --tail=12
+Found 4 pods, using pod/homework-backend-5c65c7f447-7pwpm
+Defaulted container "backend" out of: backend, wait-postgres (init)
+INFO:     10.244.0.1:55322 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.244.0.1:56706 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.0.1:56718 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.244.0.1:45890 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.0.1:45898 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.244.0.1:45630 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.244.0.1:44730 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.0.1:44746 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.244.0.1:59338 - "GET /health HTTP/1.1" 200 OK
+INFO:     10.244.0.1:59344 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.244.0.1:59684 - "GET /ready HTTP/1.1" 200 OK
+INFO:     10.244.0.1:36012 - "GET /health HTTP/1.1" 200 OK
+runnervm8k3b6:homework-tracker-capstone $ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

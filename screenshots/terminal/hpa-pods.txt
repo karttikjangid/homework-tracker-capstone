@@ -1,0 +1,55 @@
+runnervm8k3b6:homework-tracker-capstone $ kubectl -n session21 get hpa,pods && kubectl -n session21 top pods
+NAME                                                   REFERENCE                     TARGETS         MINPODS   MAXPODS   REPLICAS   AGE
+horizontalpodautoscaler.autoscaling/homework-backend   Deployment/homework-backend   cpu: 456%/60%   2         4         4          101s
+
+NAME                                    READY   STATUS        RESTARTS   AGE
+pod/capstone-load-ltvb7                 1/1     Terminating   0          55s
+pod/homework-backend-5c65c7f447-7pwpm   1/1     Running       0          101s
+pod/homework-backend-5c65c7f447-ds2rm   1/1     Running       0          26s
+pod/homework-backend-5c65c7f447-fmhmx   1/1     Running       0          26s
+pod/homework-backend-5c65c7f447-m9fz9   1/1     Running       0          101s
+pod/homework-frontend-8c769556f-6jtck   1/1     Running       0          101s
+pod/homework-frontend-8c769556f-79zzj   1/1     Running       0          101s
+pod/postgres-7989d56484-28tbw           1/1     Running       0          101s
+NAME                                CPU(cores)   MEMORY(bytes)   
+capstone-load-ltvb7                 206m         8Mi             
+homework-backend-5c65c7f447-7pwpm   184m         64Mi            
+homework-backend-5c65c7f447-ds2rm   300m         50Mi            
+homework-backend-5c65c7f447-fmhmx   194m         61Mi            
+homework-backend-5c65c7f447-m9fz9   298m         65Mi            
+homework-frontend-8c769556f-6jtck   1m           4Mi             
+homework-frontend-8c769556f-79zzj   1m           4Mi             
+postgres-7989d56484-28tbw           126m         59Mi            
+runnervm8k3b6:homework-tracker-capstone $ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

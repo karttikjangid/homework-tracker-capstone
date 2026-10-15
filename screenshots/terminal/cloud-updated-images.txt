@@ -1,0 +1,55 @@
+Kartiks-MacBook-Air:capstone $ kubectl -n session21 get deployments -o custom-columns='NAME:.metadata.name,IMAGE:.spec.template.spec.containers[*].image,READY:.status.read
+yReplicas' && kubectl -n session21 get pods,svc,ingress,hpa,pvc
+NAME                IMAGE                                                                                      READY
+homework-backend    ghcr.io/karttikjangid/homework-tracker-backend:2b74cb7f4da3cbb2dccc8faaab52b23c68f46f98    2
+homework-frontend   ghcr.io/karttikjangid/homework-tracker-frontend:2b74cb7f4da3cbb2dccc8faaab52b23c68f46f98   2
+postgres            postgres:16-alpine                                                                         1
+NAME                                     READY   STATUS    RESTARTS   AGE
+pod/homework-backend-54f56ff9b7-k5blf    1/1     Running   0          28s
+pod/homework-backend-54f56ff9b7-kl7gd    1/1     Running   0          57s
+pod/homework-frontend-6cbd54b85c-jm2tl   1/1     Running   0          42s
+pod/homework-frontend-6cbd54b85c-znslt   1/1     Running   0          57s
+pod/postgres-cf49944ff-7x7sh             1/1     Running   0          30m
+
+NAME                        TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
+service/backend             ClusterIP   10.43.66.105    <none>        8000/TCP   30m
+service/homework-frontend   ClusterIP   10.43.146.189   <none>        80/TCP     30m
+service/postgres            ClusterIP   10.43.33.35     <none>        5432/TCP   30m
+
+NAME                                 CLASS     HOSTS   ADDRESS     PORTS   AGE
+ingress.networking.k8s.io/homework   traefik   *       10.21.1.4   80      30m
+
+NAME                                                   REFERENCE                     TARGETS       MINPODS   MAXPODS   REPLICAS   AGE
+horizontalpodautoscaler.autoscaling/homework-backend   Deployment/homework-backend   cpu: 4%/60%   2         4         2          30m
+
+NAME                                  STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE
+persistentvolumeclaim/postgres-data   Bound    pvc-81b6e916-8181-4124-a733-2db39ec62a88   1Gi        RWO            local-path     <unset>                 30m
+Kartiks-MacBook-Air:capstone $ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

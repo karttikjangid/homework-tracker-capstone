@@ -1,0 +1,55 @@
+Kartiks-MacBook-Air:capstone $ git status --short && git diff --stat && git log -5 --oneline
+ M README.md
+ M SUBMISSION.md
+ M frontend/src/main.jsx
+ M gitops/application.yaml
+ M gitops/project.yaml
+ M terraform/README.md
+?? .github/
+?? REQUIREMENTS.md
+?? screenshots/terminal/
+?? scripts/capture-terminal.cjs
+?? scripts/terminal-scenes.json
+ README.md               | 300 +++++++++++++++++++++++++------------------------------------------------------------------------------------------------------------------
+ SUBMISSION.md           |  46 +++-------------------
+ frontend/src/main.jsx   |   2 +-
+ gitops/application.yaml |   4 +-
+ gitops/project.yaml     |   2 +-
+ terraform/README.md     |   2 +-
+ 6 files changed, 65 insertions(+), 291 deletions(-)
+a476af7 (HEAD -> main) Record verified capstone release and submission evidence [skip ci]
+e7a8fa4 Propagate CI test failures and locate migrations explicitly
+9d2cd8b Isolate GitOps health checks from CI ingress routing
+4ee0fa7 Declare the Argo CD project before capstone reconciliation
+3ba7729 Use internal ingress service for disposable CI cluster
+Kartiks-MacBook-Air:capstone $ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

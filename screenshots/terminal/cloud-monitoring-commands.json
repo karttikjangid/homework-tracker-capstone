@@ -1,0 +1,18 @@
+[
+  {
+    "name": "cloud-monitoring-install",
+    "command": "export KUBECONFIG=/Users/kartik/Documents/Codex/2026-10-10/then-show-the-relevant-screenshot-running/work/final-delivery/kubeconfig.yaml; helm repo add prometheus-community https://prometheus-community.github.io/helm-charts && helm repo add grafana https://grafana.github.io/helm-charts && helm repo update && helm upgrade --install session21-prometheus prometheus-community/prometheus -n session21-monitoring --create-namespace -f monitoring/prometheus-values.yaml --wait --timeout 300s && helm upgrade --install session21-grafana grafana/grafana -n session21-monitoring -f monitoring/grafana-values.yaml --wait --timeout 300s",
+    "started": "2026-10-15T21:34:02.884Z",
+    "finished": "2026-10-15T21:35:55.816Z",
+    "exitCode": 0,
+    "expected": 0
+  },
+  {
+    "name": "cloud-observability",
+    "command": "kubectl -n session21-monitoring get pods,svc && kubectl -n session21 top pods && kubectl -n session21 logs deployment/homework-backend --tail=8",
+    "started": "2026-10-15T21:35:58.073Z",
+    "finished": "2026-10-15T21:35:59.310Z",
+    "exitCode": 0,
+    "expected": 0
+  }
+]

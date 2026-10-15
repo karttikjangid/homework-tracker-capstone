@@ -1,0 +1,55 @@
+Kartiks-MacBook-Air:session21-python $ kubectl get nodes -o wide
+NAME                 STATUS   ROLES           AGE    VERSION        INTERNAL-IP   EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION             CONTAINER-RUNTIME
+session21-homework   Ready    control-plane   4h8m   v1.36.5+k3s1   10.21.1.4     <none>        Ubuntu 22.04.5 LTS   6.8.0-1070-azure (amd64)   containerd://2.3.4-k3s1.36
+Kartiks-MacBook-Air:session21-python $ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

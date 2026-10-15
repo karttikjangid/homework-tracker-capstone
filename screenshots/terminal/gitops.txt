@@ -1,0 +1,55 @@
+runnervm8k3b6:homework-tracker-capstone $ kubectl -n argocd get application session21 && kubectl -n session21-gitops get pods,svc
+NAME        SYNC STATUS   HEALTH STATUS
+session21   Synced        Healthy
+NAME                                     READY   STATUS    RESTARTS   AGE
+pod/homework-backend-576dbf7cd9-dw8qv    1/1     Running   0          67s
+pod/homework-backend-576dbf7cd9-j76fz    1/1     Running   0          67s
+pod/homework-frontend-764c88565c-7g62f   1/1     Running   0          67s
+pod/homework-frontend-764c88565c-j8vtt   1/1     Running   0          28s
+pod/postgres-7989d56484-bmlrq            1/1     Running   0          67s
+
+NAME                        TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
+service/backend             ClusterIP   10.96.133.3     <none>        8000/TCP   67s
+service/homework-frontend   ClusterIP   10.96.220.192   <none>        80/TCP     67s
+service/postgres            ClusterIP   10.96.48.5      <none>        5432/TCP   67s
+runnervm8k3b6:homework-tracker-capstone $ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

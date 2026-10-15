@@ -1,0 +1,55 @@
+Kartiks-MacBook-Air:capstone $ ssh -i "$CAPSTONE_SSH_KEY" -o UserKnownHostsFile="$CAPSTONE_KNOWN_HOSTS" -o StrictHostKeyChecking=yes -o ConnectTimeout=15 -o BatchMode=yes 
+student@"$CAPSTONE_VM_IP" 'sudo k3s ctr -n k8s.io images import /tmp/homework-tracker-images.tar.gz && sudo k3s ctr -n k8s.io images ls | grep homework-tracker'
+ghcr.io/karttikjangid/homework tracker b        saved
+application/vnd.oci.image.manifest.v1+json sha256:ab7fe43fbdf3b37281f96f0e2a9386014a15081557f59928daaf2fbc96051805
+Importing       elapsed: 8.1 s  total:   0.0 B  (0.0 B/s)
+ghcr.io/karttikjangid/homework tracker b        saved
+ghcr.io/karttikjangid/homework tracker f        saved
+application/vnd.oci.image.manifest.v1+json sha256:ab7fe43fbdf3b37281f96f0e2a9386014a15081557f59928daaf2fbc96051805
+application/vnd.oci.image.manifest.v1+json sha256:1ff2d453d2e824cd2ed250fd84b916eb25c53ab0b3db1c4c4979f1518e2ced5c
+Importing       elapsed: 8.1 s  total:   0.0 B  (0.0 B/s)
+ghcr.io/karttikjangid/homework-tracker-backend:2d43d2c139db84717150545a69dc8b41cc1609c5                                        application/vnd.oci.image.manifest.v1+json  
+              sha256:ab7fe43fbdf3b37281f96f0e2a9386014a15081557f59928daaf2fbc96051805 129.7 MiB linux/amd64                                                                
+                            io.cri-containerd.image=managed 
+ghcr.io/karttikjangid/homework-tracker-frontend:2d43d2c139db84717150545a69dc8b41cc1609c5                                       application/vnd.oci.image.manifest.v1+json  
+              sha256:1ff2d453d2e824cd2ed250fd84b916eb25c53ab0b3db1c4c4979f1518e2ced5c 59.1 MiB  linux/amd64                                                                
+                            io.cri-containerd.image=managed 
+Kartiks-MacBook-Air:capstone $ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

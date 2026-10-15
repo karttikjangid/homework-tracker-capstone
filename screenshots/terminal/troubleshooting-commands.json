@@ -1,0 +1,18 @@
+[
+  {
+    "name": "troubleshooting",
+    "command": "bash scripts/troubleshoot.sh",
+    "started": "2026-10-15T21:50:43.391Z",
+    "finished": "2026-10-15T21:50:50.018Z",
+    "exitCode": 0,
+    "expected": 0
+  },
+  {
+    "name": "troubleshooting-recovered",
+    "command": "kubectl -n session21 get pods,svc && curl -fsS http://localhost:8000/ready",
+    "started": "2026-10-15T21:50:52.289Z",
+    "finished": "2026-10-15T21:50:52.831Z",
+    "exitCode": 0,
+    "expected": 0
+  }
+]

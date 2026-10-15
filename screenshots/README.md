@@ -1,5 +1,25 @@
 # Evidence index
 
+## Standalone capstone — 16 October 2026
+
+- [Successful pipeline](https://github.com/karttikjangid/homework-tracker-capstone/actions/runs/38812142701), image/source SHA `2b74cb7f4da3cbb2dccc8faaab52b23c68f46f98`
+- [Eleven passing tests](standalone-review-tests.txt), [SAST](standalone-sast-report.json), [dependency audit](standalone-sca-report.json), [secret scan](standalone-secret-report.json), [backend](standalone-backend-scan.txt) and [frontend](standalone-frontend-scan.txt) image scans
+- [Live terminal screenshots, recordings and command records](terminal/)
+- [GitOps Synced/Healthy after self-healing](standalone-review-gitops.yaml) and [HPA scale-up](standalone-review-hpa.txt)
+- [Cloud update with retained PostgreSQL assignment](terminal/cloud-api-after.txt)
+- [Terraform destroy](terminal/terraform-destroy.txt) and [Azure cleanup](terminal/azure-cleanup.txt)
+- [Recorded walkthrough and chapters](../WALKTHROUGH.md)
+
+The terminal captures show commands executing in a Bash PTY through a browser terminal. The command records include timestamps and exit statuses. Browser screenshots show the running application, GitHub Actions, Prometheus and Grafana.
+
+The first standalone run's [Service check timeout](terminal/service-check-first-attempt.txt) is retained separately from the successful rerun. The live cloud checks and the final CI exercise both passed after adding bounded HTTP verification.
+
+## Earlier coursework evidence
+
+
+Current standalone verification is listed in the project README. Files below retain the earlier coursework review and its original run URLs. They are historical evidence, not results from the new standalone pipeline.
+
+
 ## Review on 15 October 2026
 
 - [Eleven passing CI tests](review-tests.txt) and [local tests from the CI working directory](review-ci-command-local.txt)
@@ -43,4 +63,4 @@ The other files record the earlier local and Azure deployment. Dates and command
 - [Cloud browser](cloud-frontend.png), [Prometheus](prometheus-targets.png), [Grafana](grafana-dashboard.png)
 - [Earlier walkthrough](session21-demo.webm)
 
-The cloud resources were destroyed after that run. No new Azure deployment was created during the review. The earlier recording and images do not demonstrate the new session/due-date fields or replace the final presentation.
+The cloud resources were destroyed after that run. The current final review uses a fresh Azure deployment and new recordings under `terminal/`; the earlier files retain their original dates.

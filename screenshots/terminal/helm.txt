@@ -1,0 +1,56 @@
+runnervm8k3b6:homework-tracker-capstone $ helm list -n session21 && helm status homework -n session21
+NAME            NAMESPACE       REVISION        UPDATED                                 STATUS          CHART                   APP VERSION
+homework        session21       1               2026-10-15 21:48:56.018026796 +0000 UTC deployed        homework-tracker-1.2.0  1.2.0      
+NAME: homework
+LAST DEPLOYED: Thu Oct 15 21:48:56 2026
+NAMESPACE: session21
+STATUS: deployed
+REVISION: 1
+DESCRIPTION: Install complete
+RESOURCES:
+==> v1/Secret
+NAME                TYPE     DATA   AGE
+homework-database   Opaque   1      5m
+postgres   Opaque   2     5m
+
+==> v1/ConfigMap
+NAME              DATA   AGE
+homework-config   1      5m
+
+==> v1/PersistentVolumeClaim
+NAME            STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE
+postgres-data   Bound    pvc-102afbbf-6b08-4502-b6da-60d5df3c00b4   1Gi        RWO            standard       <unset>                 5m
+
+==> v1/Service
+NAME      TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
+backend   ClusterIP   10.96.133.121   <none>        8000/TCP   5m
+homework-frontend   ClusterIP   10.96.230.89   <none>   80/TCP   5m
+postgres   ClusterIP   10.96.159.64   <none>   5432/TCP   5m1s
+
+==> v1/Deployment
+NAME               READY   UP-TO-DATE   AVAILABLE   AGE
+homework-backend   4/4     4            4           5m1s
+homework-frontend   2/2   2     2     5m1s
+postgres   1/1   1     1     5m1s
+
+==> v1/Pod(related)
+NAME                                READY   STATUS    RESTARTS   AGE
+homework-backend-5c65c7f447-7pwpm   1/1     Running   0          5m1s
+homework-backend-5c65c7f447-ds2rm   1/1     Running   0          3m46s
+homework-backend-5c65c7f447-fmhmx   1/1     Running   0          3m46s
+homework-backend-5c65c7f447-m9fz9   1/1     Running   0          5m1s
+homework-frontend-8c769556f-6jtck   1/1   Running   0     5m1s
+homework-frontend-8c769556f-79zzj   1/1   Running   0     5m1s
+postgres-7989d56484-28tbw   1/1   Running   0     5m1s
+
+==> v2/HorizontalPodAutoscaler
+NAME               REFERENCE                     TARGETS       MINPODS   MAXPODS   REPLICAS   AGE
+homework-backend   Deployment/homework-backend   cpu: 4%/60%   2         4         4          5m1s
+
+==> v1/Ingress
+NAME       CLASS     HOSTS   ADDRESS   PORTS   AGE
+homework   traefik   *                 80      5m1s
+
+
+TEST SUITE: None
+runnervm8k3b6:homework-tracker-capstone $ 

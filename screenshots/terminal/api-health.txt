@@ -1,0 +1,55 @@
+runnervm8k3b6:homework-tracker-capstone $ curl -fsS -i http://localhost:8000/health && curl -fsS -i http://localhost:8000/ready
+HTTP/1.1 200 OK
+date: Thu, 15 Oct 2026 21:46:40 GMT
+server: uvicorn
+content-length: 15
+content-type: application/json
+vary: Origin
+
+{"status":"UP"}HTTP/1.1 200 OK
+date: Thu, 15 Oct 2026 21:46:40 GMT
+server: uvicorn
+content-length: 18
+content-type: application/json
+vary: Origin
+
+{"status":"READY"}runnervm8k3b6:homework-tracker-capstone $ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

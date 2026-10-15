@@ -1,0 +1,55 @@
+Kartiks-MacBook-Air:session21-python $ kubectl -n session21 get pods,svc,ingress,hpa,pvc && helm list -n session21
+NAME                                     READY   STATUS    RESTARTS   AGE
+pod/homework-backend-f4dcf97d9-fd5mx     1/1     Running   0          64s
+pod/homework-backend-f4dcf97d9-scwcs     1/1     Running   0          64s
+pod/homework-frontend-778d68bbd5-2lg8q   1/1     Running   0          64s
+pod/homework-frontend-778d68bbd5-c78vb   1/1     Running   0          64s
+pod/postgres-cf49944ff-7x7sh             1/1     Running   0          64s
+
+NAME                        TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
+service/backend             ClusterIP   10.43.66.105    <none>        8000/TCP   64s
+service/homework-frontend   ClusterIP   10.43.146.189   <none>        80/TCP     64s
+service/postgres            ClusterIP   10.43.33.35     <none>        5432/TCP   64s
+
+NAME                                 CLASS     HOSTS   ADDRESS     PORTS   AGE
+ingress.networking.k8s.io/homework   traefik   *       10.21.1.4   80      63s
+
+NAME                                                   REFERENCE                     TARGETS              MINPODS   MAXPODS   REPLICAS   AGE
+horizontalpodautoscaler.autoscaling/homework-backend   Deployment/homework-backend   cpu: <unknown>/60%   2         4         2          64s
+
+NAME                                  STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE
+persistentvolumeclaim/postgres-data   Bound    pvc-81b6e916-8181-4124-a733-2db39ec62a88   1Gi        RWO            local-path     <unset>                 64s
+NAME            NAMESPACE       REVISION        UPDATED                                 STATUS          CHART                   APP VERSION
+homework        session21       1               2026-10-16 02:55:40.795835 +0530 IST    deployed        homework-tracker-1.2.0  1.2.0      
+Kartiks-MacBook-Air:session21-python $ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

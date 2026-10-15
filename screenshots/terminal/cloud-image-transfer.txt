@@ -1,0 +1,55 @@
+Kartiks-MacBook-Air:capstone $ scp -i "$CAPSTONE_SSH_KEY" -o UserKnownHostsFile="$CAPSTONE_KNOWN_HOSTS" -o StrictHostKeyChecking=yes -o ConnectTimeout=15 -o BatchMode=yes 
+"$CAPSTONE_IMAGES" student@"$CAPSTONE_VM_IP":/tmp/homework-tracker-images.tar.gz
+homework-tracker-images.tar.gz                                                                                                           100%   64MB   7.6MB/s   00:08    
+Kartiks-MacBook-Air:capstone $ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

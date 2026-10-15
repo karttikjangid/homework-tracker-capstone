@@ -1,0 +1,55 @@
+runnervm8k3b6:homework-tracker-capstone $ docker compose -p session21-evidence exec -T postgres psql -U taskboard -d taskboard -c 'SELECT title, session_number, due_date, 
+status FROM tasks; SELECT version_num FROM alembic_version;'
+              title              | session_number |  due_date  | status 
+---------------------------------+----------------+------------+--------
+ Capstone terminal demonstration |             21 | 2026-10-16 | DONE
+(1 row)
+
+       version_num       
+-------------------------
+ 0002_assignment_details
+(1 row)
+
+runnervm8k3b6:homework-tracker-capstone $ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

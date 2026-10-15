@@ -1,0 +1,156 @@
+runnervm8k3b6:homework-tracker-capstone $ bash scripts/test-hpa.sh
++ kubectl -n session21 get hpa,pods
+NAME                                                   REFERENCE                     TARGETS              MINPODS   MAXPODS   REPLICAS   AGE
+horizontalpodautoscaler.autoscaling/homework-backend   Deployment/homework-backend   cpu: <unknown>/60%   2         4         2          46s
+
+NAME                                    READY   STATUS    RESTARTS   AGE
+pod/homework-backend-5c65c7f447-7pwpm   1/1     Running   0          46s
+pod/homework-backend-5c65c7f447-m9fz9   1/1     Running   0          46s
+pod/homework-frontend-8c769556f-6jtck   1/1     Running   0          46s
+pod/homework-frontend-8c769556f-79zzj   1/1     Running   0          46s
+pod/postgres-7989d56484-28tbw           1/1     Running   0          46s
++ for attempt in {1..30}
++ kubectl -n session21 top pods
+NAME                                CPU(cores)   MEMORY(bytes)   
+homework-backend-5c65c7f447-7pwpm   262m         61Mi            
+homework-backend-5c65c7f447-m9fz9   163m         61Mi            
+homework-frontend-8c769556f-6jtck   1m           4Mi             
+homework-frontend-8c769556f-79zzj   1m           4Mi             
+postgres-7989d56484-28tbw           5m           24Mi            
++ break
++ kubectl -n session21 top pods
+NAME                                CPU(cores)   MEMORY(bytes)   
+homework-backend-5c65c7f447-7pwpm   262m         61Mi            
+homework-backend-5c65c7f447-m9fz9   163m         61Mi            
+homework-frontend-8c769556f-6jtck   1m           4Mi             
+homework-frontend-8c769556f-79zzj   1m           4Mi             
+postgres-7989d56484-28tbw           5m           24Mi            
++ kubectl -n session21 create job capstone-load --image=busybox:1.37 -- sh -c '
+  for worker in $(seq 1 16); do
+    (while true; do wget -qO /dev/null http://backend:8000/api/tasks || exit 1; done) &
+  done
+  wait
+'
+job.batch/capstone-load created
++ scaled=false
++ for attempt in {1..36}
++ kubectl -n session21 get hpa
+NAME               REFERENCE                     TARGETS              MINPODS   MAXPODS   REPLICAS   AGE
+homework-backend   Deployment/homework-backend   cpu: <unknown>/60%   2         4         2          46s
+++ kubectl -n session21 get deployment homework-backend -o 'jsonpath={.spec.replicas}'
++ replicas=2
++ (( replicas > 2 ))
++ sleep 5
++ for attempt in {1..36}
++ kubectl -n session21 get hpa
+NAME               REFERENCE                     TARGETS              MINPODS   MAXPODS   REPLICAS   AGE
+homework-backend   Deployment/homework-backend   cpu: <unknown>/60%   2         4         2          51s
+++ kubectl -n session21 get deployment homework-backend -o 'jsonpath={.spec.replicas}'
++ replicas=2
++ (( replicas > 2 ))
++ sleep 5
++ for attempt in {1..36}
++ kubectl -n session21 get hpa
+NAME               REFERENCE                     TARGETS              MINPODS   MAXPODS   REPLICAS   AGE
+homework-backend   Deployment/homework-backend   cpu: <unknown>/60%   2         4         2          56s
+++ kubectl -n session21 get deployment homework-backend -o 'jsonpath={.spec.replicas}'
++ replicas=2
++ (( replicas > 2 ))
++ sleep 5
++ for attempt in {1..36}
++ kubectl -n session21 get hpa
+NAME               REFERENCE                     TARGETS              MINPODS   MAXPODS   REPLICAS   AGE
+homework-backend   Deployment/homework-backend   cpu: <unknown>/60%   2         4         2          62s
+++ kubectl -n session21 get deployment homework-backend -o 'jsonpath={.spec.replicas}'
++ replicas=2
++ (( replicas > 2 ))
++ sleep 5
++ for attempt in {1..36}
++ kubectl -n session21 get hpa
+NAME               REFERENCE                     TARGETS              MINPODS   MAXPODS   REPLICAS   AGE
+homework-backend   Deployment/homework-backend   cpu: <unknown>/60%   2         4         2          67s
+++ kubectl -n session21 get deployment homework-backend -o 'jsonpath={.spec.replicas}'
++ replicas=2
++ (( replicas > 2 ))
++ sleep 5
++ for attempt in {1..36}
++ kubectl -n session21 get hpa
+NAME               REFERENCE                     TARGETS              MINPODS   MAXPODS   REPLICAS   AGE
+homework-backend   Deployment/homework-backend   cpu: <unknown>/60%   2         4         2          72s
+++ kubectl -n session21 get deployment homework-backend -o 'jsonpath={.spec.replicas}'
++ replicas=2
++ (( replicas > 2 ))
++ sleep 5
++ for attempt in {1..36}
++ kubectl -n session21 get hpa
+NAME               REFERENCE                     TARGETS         MINPODS   MAXPODS   REPLICAS   AGE
+homework-backend   Deployment/homework-backend   cpu: 308%/60%   2         4         2          77s
+++ kubectl -n session21 get deployment homework-backend -o 'jsonpath={.spec.replicas}'
++ replicas=4
++ (( replicas > 2 ))
++ scaled=true
++ break
++ [[ true == true ]]
++ kubectl -n session21 rollout status deployment/homework-backend --timeout=120s
+Waiting for deployment "homework-backend" rollout to finish: 2 of 4 updated replicas are available...
+Waiting for deployment "homework-backend" rollout to finish: 3 of 4 updated replicas are available...
+deployment "homework-backend" successfully rolled out
++ kubectl -n session21 get hpa,pods
+NAME                                                   REFERENCE                     TARGETS         MINPODS   MAXPODS   REPLICAS   AGE
+horizontalpodautoscaler.autoscaling/homework-backend   Deployment/homework-backend   cpu: 456%/60%   2         4         4          98s
+
+NAME                                    READY   STATUS    RESTARTS   AGE
+pod/capstone-load-ltvb7                 1/1     Running   0          52s
+pod/homework-backend-5c65c7f447-7pwpm   1/1     Running   0          98s
+pod/homework-backend-5c65c7f447-ds2rm   1/1     Running   0          23s
+pod/homework-backend-5c65c7f447-fmhmx   1/1     Running   0          23s
+pod/homework-backend-5c65c7f447-m9fz9   1/1     Running   0          98s
+pod/homework-frontend-8c769556f-6jtck   1/1     Running   0          98s
+pod/homework-frontend-8c769556f-79zzj   1/1     Running   0          98s
+pod/postgres-7989d56484-28tbw           1/1     Running   0          98s
++ kubectl -n session21 top pods
+NAME                                CPU(cores)   MEMORY(bytes)   
+capstone-load-ltvb7                 206m         8Mi             
+homework-backend-5c65c7f447-7pwpm   184m         64Mi            
+homework-backend-5c65c7f447-ds2rm   300m         50Mi            
+homework-backend-5c65c7f447-fmhmx   194m         61Mi            
+homework-backend-5c65c7f447-m9fz9   298m         65Mi            
+homework-frontend-8c769556f-6jtck   1m           4Mi             
+homework-frontend-8c769556f-79zzj   1m           4Mi             
+postgres-7989d56484-28tbw           126m         59Mi            
++ kubectl -n session21 describe hpa homework-backend
+Name:                                                  homework-backend
+Namespace:                                             session21
+Labels:                                                app.kubernetes.io/managed-by=Helm
+Annotations:                                           meta.helm.sh/release-name: homework
+                                                       meta.helm.sh/release-namespace: session21
+CreationTimestamp:                                     Thu, 15 Oct 2026 21:48:56 +0000
+Reference:                                             Deployment/homework-backend
+Metrics:                                               ( current / target )
+  resource cpu on pods  (as a percentage of request):  456% (228m) / 60%
+Min replicas:                                          2
+Max replicas:                                          4
+Deployment pods:                                       4 current / 4 desired
+Conditions:
+  Type            Status  Reason            Message
+  ----            ------  ------            -------
+  AbleToScale     True    ReadyForNewScale  recommended size matches current size
+  ScalingActive   True    ValidMetricFound  the HPA was able to successfully calculate a replica count from cpu resource utilization (percentage of request)
+  ScalingLimited  True    TooManyReplicas   the desired replica count is more than the maximum replica count
+  ScaledToZero    False   NotScaledToZero   the HPA controller did not scale the workload to zero
+Events:
+  Type     Reason                        Age                From                       Message
+  ----     ------                        ----               ----                       -------
+  Warning  FailedGetResourceMetric       68s (x3 over 98s)  horizontal-pod-autoscaler  failed to get cpu utilization: unable to get metrics for resource cpu: no metrics re
+turned from resource metrics API
+  Warning  FailedComputeMetricsReplicas  68s (x3 over 98s)  horizontal-pod-autoscaler  invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource met
+ric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+  Warning  FailedGetResourceMetric       38s (x2 over 53s)  horizontal-pod-autoscaler  failed to get cpu utilization: did not receive metrics for targeted pods (pods might
+ be unready)
+  Warning  FailedComputeMetricsReplicas  38s (x2 over 53s)  horizontal-pod-autoscaler  invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource met
+ric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+  Normal   SuccessfulRescale             23s                horizontal-pod-autoscaler  New size: 4; reason: cpu resource utilization (percentage of request) above target
++ cleanup
++ kubectl -n session21 delete job capstone-load --ignore-not-found
+job.batch "capstone-load" deleted from session21 namespace
+runnervm8k3b6:homework-tracker-capstone $ 

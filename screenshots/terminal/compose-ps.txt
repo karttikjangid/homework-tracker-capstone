@@ -1,0 +1,55 @@
+runnervm8k3b6:homework-tracker-capstone $ docker compose -p session21-evidence ps
+NAME                            IMAGE                         COMMAND                  SERVICE    CREATED          STATUS                    PORTS
+session21-evidence-backend-1    session21-evidence-backend    "sh -c 'alembic upgr…"   backend    18 seconds ago   Up 14 seconds (healthy)   127.0.0.1:8000->8000/tcp
+session21-evidence-frontend-1   session21-evidence-frontend   "/docker-entrypoint.…"   frontend   18 seconds ago   Up 6 seconds (healthy)    127.0.0.1:3000->8080/tcp
+session21-evidence-postgres-1   postgres:16-alpine            "docker-entrypoint.s…"   postgres   18 seconds ago   Up 18 seconds (healthy)   127.0.0.1:5432->5432/tcp
+runnervm8k3b6:homework-tracker-capstone $ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

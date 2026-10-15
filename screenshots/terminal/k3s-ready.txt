@@ -1,0 +1,55 @@
+Kartiks-MacBook-Air:session21-python $ ssh -i "$CAPSTONE_SSH_KEY" -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile="$CAPSTONE_KNOWN_HOSTS" -o ConnectTimeout=15 -o
+ BatchMode=yes student@"$CAPSTONE_VM_IP" 'sudo cloud-init status --wait && sudo k3s kubectl get nodes'
+status: done
+NAME                 STATUS   ROLES           AGE    VERSION
+session21-homework   Ready    control-plane   4h8m   v1.36.5+k3s1
+Kartiks-MacBook-Air:session21-python $ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
