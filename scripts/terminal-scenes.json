@@ -1,0 +1,103 @@
+{
+  "compose": [
+    {
+      "name": "pytest",
+      "command": "python -m pytest -v backend/tests"
+    },
+    {
+      "name": "compose-clean",
+      "command": "docker compose -p session21-evidence down -v --remove-orphans"
+    },
+    {
+      "name": "compose-build",
+      "command": "docker compose -p session21-evidence up -d --build --wait --wait-timeout 120",
+      "timeout": 300000
+    },
+    {
+      "name": "compose-ps",
+      "command": "docker compose -p session21-evidence ps"
+    },
+    {
+      "name": "api-health",
+      "command": "curl -fsS -i http://localhost:8000/health && curl -fsS -i http://localhost:8000/ready"
+    },
+    {
+      "name": "api-create",
+      "command": "curl -fsS -i -X POST http://localhost:8000/api/tasks -H 'Content-Type: application/json' -d '{\"title\":\"Capstone terminal demonstration\",\"session_number\":21,\"due_date\":\"2026-10-16\",\"assignee\":\"Kartik\",\"priority\":\"HIGH\"}'"
+    },
+    {
+      "name": "api-read-update",
+      "command": "TASK_ID=$(curl -fsS http://localhost:8000/api/tasks | python -c 'import json,sys; print(json.load(sys.stdin)[0][\"id\"])'); curl -fsS -i http://localhost:8000/api/tasks/$TASK_ID && curl -fsS -i -X PUT http://localhost:8000/api/tasks/$TASK_ID -H 'Content-Type: application/json' -d '{\"status\":\"DONE\"}'"
+    },
+    {
+      "name": "database",
+      "command": "docker compose -p session21-evidence exec -T postgres psql -U taskboard -d taskboard -c 'SELECT title, session_number, due_date, status FROM tasks; SELECT version_num FROM alembic_version;'"
+    },
+    {
+      "name": "api-stats-delete",
+      "command": "curl -fsS -i http://localhost:8000/api/tasks/stats && curl -fsS -i -X DELETE http://localhost:8000/api/tasks/$TASK_ID"
+    },
+    {
+      "name": "metrics",
+      "command": "curl -fsS http://localhost:8000/metrics | grep -E 'http_requests_total|process_resident_memory_bytes|http_request_duration_seconds_count'"
+    },
+    {
+      "name": "non-root",
+      "command": "docker compose -p session21-evidence exec -T backend id && docker compose -p session21-evidence exec -T frontend id"
+    }
+  ],
+  "hpa": [
+    {
+      "name": "hpa-load",
+      "command": "bash scripts/test-hpa.sh",
+      "timeout": 360000,
+      "log": "screenshots/review-hpa.txt"
+    },
+    {
+      "name": "hpa-pods",
+      "command": "kubectl -n session21 get hpa,pods && kubectl -n session21 top pods"
+    }
+  ],
+  "troubleshooting": [
+    {
+      "name": "troubleshooting",
+      "command": "bash scripts/troubleshoot.sh",
+      "timeout": 300000,
+      "log": "screenshots/review-troubleshooting.txt"
+    },
+    {
+      "name": "troubleshooting-recovered",
+      "command": "kubectl -n session21 get pods,svc && curl -fsS http://localhost:8000/ready"
+    }
+  ],
+  "cluster": [
+    {
+      "name": "kubernetes-pods",
+      "command": "kubectl -n session21 get pods -o wide"
+    },
+    {
+      "name": "kubernetes-services",
+      "command": "kubectl -n session21 get svc,ingress,pvc"
+    },
+    {
+      "name": "helm",
+      "command": "helm list -n session21 && helm status homework -n session21"
+    },
+    {
+      "name": "logs",
+      "command": "kubectl -n session21 logs deployment/homework-backend --tail=12"
+    },
+    {
+      "name": "kubernetes-metrics",
+      "command": "curl -fsS http://localhost:8000/metrics | grep -E 'http_requests_total|process_resident_memory_bytes'"
+    },
+    {
+      "name": "gitops",
+      "command": "kubectl -n argocd get application session21 && kubectl -n session21-gitops get pods,svc"
+    },
+    {
+      "name": "image-release",
+      "command": "kubectl -n session21 get deployments -o custom-columns='NAME:.metadata.name,IMAGE:.spec.template.spec.containers[*].image,READY:.status.readyReplicas'"
+    }
+  ]
+}

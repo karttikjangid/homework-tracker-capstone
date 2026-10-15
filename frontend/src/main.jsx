@@ -127,7 +127,7 @@ function App() {
           <div>
             <p className="eyebrow">COURSE / ASSIGNMENTS</p>
             <h1>Course assignments</h1>
-            <p className="muted">Track each session’s assignment.</p>
+            <p className="muted">Track deadlines and progress across course sessions.</p>
           </div>
           <button className="primary" onClick={() => setShowForm(true)}>
             ＋ New assignment

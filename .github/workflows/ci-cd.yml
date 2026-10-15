@@ -1,0 +1,200 @@
+name: Homework Tracker CI/CD
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'backend/**'
+      - 'frontend/**'
+      - 'helm/**'
+      - 'monitoring/**'
+      - 'terraform/**'
+      - 'k8s/**'
+      - 'scripts/**'
+      - 'security/**'
+      - 'gitops/**'
+      - 'docker-compose.yml'
+      - '.github/workflows/ci-cd.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  packages: write
+jobs:
+  build-test-deploy:
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        shell: bash
+        working-directory: .
+    env:
+      BACKEND: ghcr.io/${{ github.repository_owner }}/homework-tracker-backend:${{ github.sha }}
+      FRONTEND: ghcr.io/${{ github.repository_owner }}/homework-tracker-frontend:${{ github.sha }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Backend tests
+        run: |
+          pip install -r backend/requirements-dev.txt
+          python -m pytest -v backend/tests | tee screenshots/review-tests.txt
+      - name: SAST and dependency audit
+        run: |
+          pip install -r security/requirements.txt
+          bandit -r backend/app -f json -o security/sast-report.json
+          pip-audit -r backend/requirements.txt --format json --output security/sca-report.json
+      - name: Secret scan
+        uses: aquasecurity/trivy-action@v0.36.0
+        with:
+          scan-type: fs
+          scan-ref: .
+          scanners: secret
+          format: json
+          exit-code: '1'
+          output: security/secret-report.json
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Frontend build
+        run: npm ci && npm run build && npm audit --audit-level=high
+        working-directory: frontend
+      - name: Prepare live terminal recording
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ttyd
+          npm install --prefix /tmp/session21-browser playwright
+          node /tmp/session21-browser/node_modules/playwright/cli.js install --with-deps chromium
+      - name: Docker build
+        run: |
+          docker build -t "$BACKEND" backend
+          docker build -t "$FRONTEND" frontend
+      - name: Live Compose and API terminal demonstration
+        run: NODE_PATH=/tmp/session21-browser/node_modules node scripts/capture-terminal.cjs scripts/terminal-scenes.json compose
+      - name: Clean isolated Compose demonstration
+        if: always()
+        run: docker compose -p session21-evidence down -v --remove-orphans
+      - name: Scan backend
+        uses: aquasecurity/trivy-action@v0.36.0
+        with:
+          image-ref: ${{ env.BACKEND }}
+          severity: HIGH,CRITICAL
+          exit-code: '1'
+          output: backend-scan.txt
+      - name: Scan frontend
+        uses: aquasecurity/trivy-action@v0.36.0
+        with:
+          image-ref: ${{ env.FRONTEND }}
+          severity: HIGH,CRITICAL
+          exit-code: '1'
+          output: frontend-scan.txt
+      - name: Security gate
+        run: echo "Tests, SAST, dependency, secret and image scans passed."
+      - name: Registry login
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Push SHA-tagged images
+        run: |
+          docker push "$BACKEND"
+          docker push "$FRONTEND"
+      - name: Start Kubernetes test cluster
+        uses: helm/kind-action@v1.15.1
+      - uses: azure/setup-helm@v4
+      - name: Install Ingress and CPU metrics
+        run: |
+          helm repo add traefik https://traefik.github.io/charts
+          helm upgrade --install traefik traefik/traefik -n ingress-system --create-namespace --set service.type=ClusterIP --wait --timeout 180s
+          kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/download/v0.9.0/components.yaml
+          # Kind has self-signed kubelet certificates; this flag is limited to the disposable CI cluster.
+          kubectl -n kube-system patch deployment metrics-server --type=json -p='[{"op":"add","path":"/spec/template/spec/containers/0/args/-","value":"--kubelet-insecure-tls"}]'
+          kubectl -n kube-system rollout status deployment/metrics-server --timeout=180s
+      - name: Deploy with Helm
+        run: |
+          helm lint ./helm/taskboard
+          kind load docker-image "$BACKEND" "$FRONTEND" --name chart-testing
+          helm upgrade --install homework ./helm/taskboard -n session21 --create-namespace \
+            --set backend.image=ghcr.io/${{ github.repository_owner }}/homework-tracker-backend --set frontend.image=ghcr.io/${{ github.repository_owner }}/homework-tracker-frontend \
+            --set backend.tag="${{ github.sha }}" --set frontend.tag="${{ github.sha }}" \
+            --set ingress.className=traefik --set ingress.host='' --wait --timeout 180s
+          kubectl -n session21 get pods,svc
+          kubectl -n session21 port-forward service/backend 8000:8000 > /tmp/session21-forward.log 2>&1 &
+          sleep 3
+          curl --fail --retry 5 --retry-connrefused http://localhost:8000/ready
+      - name: Verify application and migration
+        run: |
+          kubectl -n session21 port-forward service/homework-frontend 3000:80 > /tmp/frontend-forward.log 2>&1 &
+          curl --fail --retry 10 --retry-connrefused http://localhost:3000/ > /dev/null
+          curl --fail http://localhost:3000/api/tasks
+          kubectl -n session21 exec deployment/postgres -- psql -U taskboard -d taskboard -c 'SELECT version_num FROM alembic_version;'
+          kubectl -n ingress-system port-forward service/traefik 8088:80 > /tmp/ingress-forward.log 2>&1 &
+          curl --fail --retry 10 --retry-connrefused http://localhost:8088/api/tasks
+          APP_URL=http://localhost:8088 NODE_PATH=/tmp/session21-browser/node_modules node scripts/test-frontend.cjs
+      - name: Autoscaling under HTTP load
+        run: NODE_PATH=/tmp/session21-browser/node_modules node scripts/capture-terminal.cjs scripts/terminal-scenes.json hpa
+      - name: Troubleshooting exercise
+        run: NODE_PATH=/tmp/session21-browser/node_modules node scripts/capture-terminal.cjs scripts/terminal-scenes.json troubleshooting
+      - name: Monitoring
+        run: |
+          helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+          helm repo add grafana https://grafana.github.io/helm-charts
+          helm repo update
+          helm upgrade --install session21-prometheus prometheus-community/prometheus -n session21-monitoring --create-namespace -f monitoring/prometheus-values.yaml --wait --timeout 300s
+          helm upgrade --install session21-grafana grafana/grafana -n session21-monitoring -f monitoring/grafana-values.yaml --wait --timeout 300s
+          kubectl -n session21-monitoring port-forward svc/session21-prometheus-server 9090:80 > /tmp/prometheus-forward.log 2>&1 &
+          kubectl -n session21-monitoring port-forward svc/session21-grafana 3005:80 > /tmp/grafana-forward.log 2>&1 &
+          sleep 5
+          curl --fail http://localhost:8000/api/tasks
+      - name: Capture monitoring evidence
+        run: |
+          GRAFANA_PASSWORD=$(kubectl -n session21-monitoring get secret session21-grafana -o jsonpath='{.data.admin-password}' | base64 -d) NODE_PATH=/tmp/session21-browser/node_modules node scripts/capture-monitoring.cjs
+      - name: GitOps reconciliation demo
+        run: |
+          trap 'kubectl -n argocd get applications,appprojects -o yaml; kubectl -n argocd logs statefulset/argocd-application-controller --tail=100; kubectl -n session21-gitops get pods,events -o wide' ERR
+          kubectl create namespace argocd
+          kubectl apply --server-side -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/v3.5.5/manifests/core-install.yaml
+          kubectl -n argocd rollout status statefulset/argocd-application-controller --timeout=180s
+          kubectl -n argocd rollout status deployment/argocd-repo-server --timeout=180s
+          kubectl apply -f gitops/project.yaml
+          # Isolate this exercise from the Helm release tested above.
+          sed -e 's/namespace: session21$/namespace: session21-gitops/' \
+            -e 's/valueFiles: \[values-gitops.yaml\]/valueFiles: [values-gitops.yaml, values-ci.yaml]/' \
+            gitops/application.yaml | kubectl apply -f -
+          kubectl -n argocd wait application/session21 --for=jsonpath='{.status.sync.status}'=Synced --timeout=300s
+          kubectl -n argocd wait application/session21 --for=jsonpath='{.status.health.status}'=Healthy --timeout=180s
+          kubectl -n session21-gitops scale deployment/homework-frontend --replicas=1
+          kubectl -n session21-gitops wait deployment/homework-frontend --for=jsonpath='{.spec.replicas}'=2 --timeout=90s
+          kubectl -n session21-gitops rollout status deployment/homework-frontend --timeout=120s
+          kubectl -n argocd wait application/session21 --for=jsonpath='{.status.sync.status}'=Synced --timeout=90s
+          kubectl -n argocd wait application/session21 --for=jsonpath='{.status.health.status}'=Healthy --timeout=180s
+          kubectl -n argocd get application/session21 -o yaml > screenshots/review-gitops.yaml
+          kubectl -n session21-gitops get pods,svc > screenshots/review-gitops.txt
+      - name: Live Kubernetes and Helm terminal demonstration
+        run: NODE_PATH=/tmp/session21-browser/node_modules node scripts/capture-terminal.cjs scripts/terminal-scenes.json cluster
+      - name: Save monitoring evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: session21-monitoring
+          path: |
+            screenshots/prometheus-*
+            screenshots/grafana-dashboard.png
+      - name: Save test and scan evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: session21-scans
+          path: |
+            *-scan.txt
+            security/*-report.json
+            screenshots/review-tests.txt
+            screenshots/review-gitops.*
+            screenshots/review-troubleshooting.txt
+            screenshots/review-hpa.txt
+            screenshots/review-frontend*.png
+      - name: Save live terminal recordings
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: session21-live-terminal
+          path: screenshots/terminal/

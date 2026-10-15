@@ -6,9 +6,9 @@ metadata:
 spec:
   project: session21
   source:
-    repoURL: https://github.com/karttikjangid/devops-heros.git
+    repoURL: https://github.com/karttikjangid/homework-tracker-capstone.git
     targetRevision: main
-    path: session21-python/helm/taskboard
+    path: helm/taskboard
     helm:
       releaseName: homework
       valueFiles: [values-gitops.yaml]

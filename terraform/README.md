@@ -44,7 +44,7 @@ Keep that SSH tunnel open. In another terminal, use a session-specific kubeconfi
 ```bash
 export KUBECONFIG=~/.kube/session21-capstone
 kubectl get nodes
-cd /path/to/devops-heros/session21-python
+cd /path/to/homework-tracker-capstone
 helm upgrade --install homework ./helm/taskboard -n session21 --create-namespace \
   --set ingress.className=traefik --set ingress.host='' --wait --timeout 180s
 kubectl -n session21 get pods,svc,ingress,hpa,pvc
