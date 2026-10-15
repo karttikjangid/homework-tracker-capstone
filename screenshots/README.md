@@ -4,6 +4,7 @@
 
 | Directory | Contents |
 | --- | --- |
+| [presentation](presentation/) | macOS-style frames around the original terminal captures |
 | [terminal](terminal/) | Live terminal screenshots, paired output, command records and original recordings |
 | [verification](verification/) | Standalone CI reports, browser screenshots, checksums and verification metadata |
 | [archive](archive/) | Earlier coursework evidence, retained with its original dates |

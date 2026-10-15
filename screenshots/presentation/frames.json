@@ -1,0 +1,162 @@
+{
+  "style": "macOS-style presentation frame",
+  "terminalContent": "Original captured image, unchanged",
+  "files": [
+    {
+      "file": "screenshots/presentation/compose-ps.png",
+      "original": "screenshots/terminal/compose-ps.png",
+      "originalSHA256": "7eaeb7d49e111570fae213fd620dfdab3f3166c1bd653acb7d154d7debcf2030",
+      "host": "CI runner",
+      "originalPixelsChanged": 0,
+      "originalImageRegion": {
+        "x": 37,
+        "y": 85,
+        "width": 1400,
+        "height": 900
+      }
+    },
+    {
+      "file": "screenshots/presentation/pytest.png",
+      "original": "screenshots/terminal/pytest.png",
+      "originalSHA256": "9fc4fe66bfcaaaed200f0ff4293a845de83c40fce72268fa6e1dad07b422a61f",
+      "host": "CI runner",
+      "originalPixelsChanged": 0,
+      "originalImageRegion": {
+        "x": 37,
+        "y": 85,
+        "width": 1400,
+        "height": 900
+      }
+    },
+    {
+      "file": "screenshots/presentation/api-create.png",
+      "original": "screenshots/terminal/api-create.png",
+      "originalSHA256": "a0ffe7271f21cf0fad8a6736bb9db1bb8a83dd2d3b0257a66fc6432e06fefd51",
+      "host": "CI runner",
+      "originalPixelsChanged": 0,
+      "originalImageRegion": {
+        "x": 37,
+        "y": 85,
+        "width": 1400,
+        "height": 900
+      }
+    },
+    {
+      "file": "screenshots/presentation/database.png",
+      "original": "screenshots/terminal/database.png",
+      "originalSHA256": "7113ceda2eff387261ce5b20260d01b1680ef92e00191a9eed2d84e1bdcc908e",
+      "host": "CI runner",
+      "originalPixelsChanged": 0,
+      "originalImageRegion": {
+        "x": 37,
+        "y": 85,
+        "width": 1400,
+        "height": 900
+      }
+    },
+    {
+      "file": "screenshots/presentation/kubernetes-pods.png",
+      "original": "screenshots/terminal/kubernetes-pods.png",
+      "originalSHA256": "4277a2409b25ae62c025326581e5c1db51a5663dc21fccaa52ec883b426e0958",
+      "host": "CI runner",
+      "originalPixelsChanged": 0,
+      "originalImageRegion": {
+        "x": 37,
+        "y": 85,
+        "width": 1400,
+        "height": 900
+      }
+    },
+    {
+      "file": "screenshots/presentation/helm.png",
+      "original": "screenshots/terminal/helm.png",
+      "originalSHA256": "7782f97bb2ada7aaf09a86538a3a230ef2a7a646e78c37c48358df566f0c6efe",
+      "host": "CI runner",
+      "originalPixelsChanged": 0,
+      "originalImageRegion": {
+        "x": 37,
+        "y": 85,
+        "width": 1400,
+        "height": 900
+      }
+    },
+    {
+      "file": "screenshots/presentation/cloud-hpa-load.png",
+      "original": "screenshots/terminal/cloud-hpa-load.png",
+      "originalSHA256": "4538e8c7fb8c6da5b9e00074af214565c0c1d336f97908196ddebd8c7611ea3d",
+      "host": "MacBook Air",
+      "originalPixelsChanged": 0,
+      "originalImageRegion": {
+        "x": 37,
+        "y": 85,
+        "width": 1400,
+        "height": 900
+      }
+    },
+    {
+      "file": "screenshots/presentation/gitops.png",
+      "original": "screenshots/terminal/gitops.png",
+      "originalSHA256": "f97633f1f73076619cad16ac17e1942d4af9ae2f54706751870e5b6fdb813e4f",
+      "host": "CI runner",
+      "originalPixelsChanged": 0,
+      "originalImageRegion": {
+        "x": 37,
+        "y": 85,
+        "width": 1400,
+        "height": 900
+      }
+    },
+    {
+      "file": "screenshots/presentation/terraform-plan.png",
+      "original": "screenshots/terminal/terraform-plan.png",
+      "originalSHA256": "e4f72b15ec4b2101d132bfdd4854a721fd785bdf3946c6a4bc94637367cfe083",
+      "host": "MacBook Air",
+      "originalPixelsChanged": 0,
+      "originalImageRegion": {
+        "x": 37,
+        "y": 85,
+        "width": 1400,
+        "height": 900
+      }
+    },
+    {
+      "file": "screenshots/presentation/terraform-apply.png",
+      "original": "screenshots/terminal/terraform-apply.png",
+      "originalSHA256": "a471b11715715c7ea2e2cb6ce5af510734e1d73951480fd298c9d94018b1e478",
+      "host": "MacBook Air",
+      "originalPixelsChanged": 0,
+      "originalImageRegion": {
+        "x": 37,
+        "y": 85,
+        "width": 1400,
+        "height": 900
+      }
+    },
+    {
+      "file": "screenshots/presentation/terraform-destroy.png",
+      "original": "screenshots/terminal/terraform-destroy.png",
+      "originalSHA256": "6d277a78707552cc41422dc6386aed49495f719b2f6d2b000495cec851876d6c",
+      "host": "MacBook Air",
+      "originalPixelsChanged": 0,
+      "originalImageRegion": {
+        "x": 37,
+        "y": 85,
+        "width": 1400,
+        "height": 900
+      }
+    },
+    {
+      "file": "screenshots/presentation/azure-cleanup.png",
+      "original": "screenshots/terminal/azure-cleanup.png",
+      "originalSHA256": "d79344f91c47a0f5e088a9ee9bede8ae9e111b298f06175d471c696d3d9ee399",
+      "host": "MacBook Air",
+      "originalPixelsChanged": 0,
+      "originalImageRegion": {
+        "x": 37,
+        "y": 85,
+        "width": 1400,
+        "height": 900
+      }
+    }
+  ]
+}

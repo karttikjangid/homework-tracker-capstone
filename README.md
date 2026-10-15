@@ -48,7 +48,7 @@ docker compose down       # Keep database data.
 docker compose down -v    # Remove the demo database too.
 ```
 
-![Three healthy Compose services](screenshots/terminal/compose-ps.png)
+![Three healthy Compose services](screenshots/presentation/compose-ps.png)
 
 ## Repository layout
 
