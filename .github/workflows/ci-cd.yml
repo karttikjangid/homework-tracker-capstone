@@ -98,6 +98,14 @@ jobs:
         run: |
           docker push "$BACKEND"
           docker push "$FRONTEND"
+      - name: Export deployable images
+        run: docker save "$BACKEND" "$FRONTEND" | gzip > /tmp/homework-tracker-images.tar.gz
+      - name: Save deployable images
+        uses: actions/upload-artifact@v4
+        with:
+          name: homework-tracker-images
+          path: /tmp/homework-tracker-images.tar.gz
+          retention-days: 7
       - name: Start Kubernetes test cluster
         uses: helm/kind-action@v1.15.1
       - uses: azure/setup-helm@v4
