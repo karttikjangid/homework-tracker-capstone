@@ -29,4 +29,13 @@ for attempt in {1..20}; do
 done
 [[ -n "$addresses" ]]
 kubectl -n session21 get endpointslices -l kubernetes.io/service-name=broken-service -o yaml
-kubectl -n session21 exec deployment/homework-frontend -- wget -qO- http://broken-service:8080/
+# EndpointSlice updates and Service forwarding do not become ready atomically.
+reachable=false
+for attempt in {1..10}; do
+  if kubectl -n session21 exec deployment/homework-frontend -- wget -T 5 -qO- http://broken-service:8080/; then
+    reachable=true
+    break
+  fi
+  sleep 2
+done
+[[ "$reachable" == true ]]

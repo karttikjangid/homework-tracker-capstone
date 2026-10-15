@@ -159,6 +159,14 @@ jobs:
       - name: GitOps reconciliation demo
         run: |
           trap 'kubectl -n argocd get applications,appprojects -o yaml; kubectl -n argocd logs statefulset/argocd-application-controller --tail=100; kubectl -n session21-gitops get pods,events -o wide' ERR
+          # Preload the promoted images using the registry login above.
+          # This also supports private GHCR packages in the disposable cluster.
+          helm template homework ./helm/taskboard -f helm/taskboard/values-gitops.yaml \
+            | awk '/image:.*ghcr.io/ {gsub(/"/, "", $2); print $2}' | sort -u \
+            | while read -r image; do
+                docker pull "$image"
+                kind load docker-image "$image" --name chart-testing
+              done
           kubectl create namespace argocd
           kubectl apply --server-side -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/v3.5.5/manifests/core-install.yaml
           kubectl -n argocd rollout status statefulset/argocd-application-controller --timeout=180s

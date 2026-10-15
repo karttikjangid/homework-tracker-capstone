@@ -7,4 +7,4 @@ spec:
   template:
     metadata: {labels: {app: broken-image}}
     spec:
-      containers: [{name: frontend, image: ghcr.io/karttikjangid/session21-frontend:does-not-exist}]
+      containers: [{name: frontend, image: nginx:session21-does-not-exist}]
