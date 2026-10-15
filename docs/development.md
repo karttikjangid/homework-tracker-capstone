@@ -20,7 +20,7 @@ docker compose down
 docker compose down -v
 ```
 
-For manual development, start only PostgreSQL, then run the backend and frontend in separate terminals:
+For manual development, use Python 3.12 and Node 22. Start only PostgreSQL, then run the backend and frontend in separate terminals:
 
 ```bash
 docker compose down
@@ -44,7 +44,11 @@ Open [localhost:5173](http://localhost:5173). Stop both development servers befo
 
 ## Tests and delivery
 
+Create or reuse the backend environment from the repository root:
+
 ```bash
+python3.12 -m venv backend/.venv
+source backend/.venv/bin/activate
 python -m pip install -r backend/requirements-dev.txt
 python -m pytest -v backend/tests
 cd frontend
