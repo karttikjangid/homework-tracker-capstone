@@ -1,0 +1,1143 @@
+[
+  {
+    "name": "api-create",
+    "command": "view-recorded-log screenshots/terminal/api-create.txt",
+    "started": "2026-10-17T18:09:49.700Z",
+    "finished": "2026-10-17T18:09:50.267Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/api-create.txt",
+      "sha256": "807ebc62f6e3863edc5fe5d7145d056137093c41dc13b11e38c3d86b182a459c"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "api-health",
+    "command": "view-recorded-log screenshots/terminal/api-health.txt",
+    "started": "2026-10-17T18:09:50.773Z",
+    "finished": "2026-10-17T18:09:51.348Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/api-health.txt",
+      "sha256": "4baa18b338f0f503f0a162b60f32e7fd8f17a1a61d890265fe15b23eccd35412"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "api-read-update",
+    "command": "view-recorded-log screenshots/terminal/api-read-update.txt",
+    "started": "2026-10-17T18:09:51.853Z",
+    "finished": "2026-10-17T18:09:52.420Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/api-read-update.txt",
+      "sha256": "f06de97f8c7a579ebd5b517263773eca25bd26fd65bfecd0fbafcc29b88e67ce"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "api-stats-delete",
+    "command": "view-recorded-log screenshots/terminal/api-stats-delete.txt",
+    "started": "2026-10-17T18:09:52.924Z",
+    "finished": "2026-10-17T18:09:53.501Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/api-stats-delete.txt",
+      "sha256": "e811703091e0ca2727c33d26725e25572f951ed3ce0a40e3eb7bb5c7dbf35d74"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "azure-cleanup",
+    "command": "view-recorded-log screenshots/terminal/azure-cleanup.txt",
+    "started": "2026-10-17T18:09:54.007Z",
+    "finished": "2026-10-17T18:09:54.584Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/azure-cleanup.txt",
+      "sha256": "e3edacf3fa2f931dc1f576d835d3a33758338e4161d683894c30a3a37e7acb70"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "azure-state",
+    "command": "view-recorded-log screenshots/terminal/azure-state.txt",
+    "started": "2026-10-17T18:09:55.091Z",
+    "finished": "2026-10-17T18:09:55.664Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/azure-state.txt",
+      "sha256": "491d1cda0d6d6543239b233dc53e303f58afcc21921e34038e03587ae77edb76"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "azure-vm-current",
+    "command": "view-recorded-log screenshots/terminal/azure-vm-current.txt",
+    "started": "2026-10-17T18:09:56.170Z",
+    "finished": "2026-10-17T18:09:56.725Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/azure-vm-current.txt",
+      "sha256": "7be33f6322fe25a63aec62a8ac99ca32ecaef40f096f2b0aff07b6c2ef9185f0"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "ci-release-approved",
+    "command": "view-recorded-log screenshots/terminal/ci-release-approved.txt",
+    "started": "2026-10-17T18:09:57.231Z",
+    "finished": "2026-10-17T18:09:57.804Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/ci-release-approved.txt",
+      "sha256": "9405d4e796edfa8ec53ae10fcdbdea89bd84318f2268e198ea7de5d13f3d437c"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "cloud-api-after",
+    "command": "view-recorded-log screenshots/terminal/cloud-api-after.txt",
+    "started": "2026-10-17T18:09:58.309Z",
+    "finished": "2026-10-17T18:09:58.888Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/cloud-api-after.txt",
+      "sha256": "a125faea321b5e302f765418e7e5ed0b17eefaa40450729afed1c75178d09012"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "cloud-api-before",
+    "command": "view-recorded-log screenshots/terminal/cloud-api-before.txt",
+    "started": "2026-10-17T18:09:59.394Z",
+    "finished": "2026-10-17T18:09:59.963Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/cloud-api-before.txt",
+      "sha256": "04d945aa11e73cbd9fc88c6b09eb360fa267402ee1f8f7859d99392f752927bd"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "cloud-helm-install",
+    "command": "view-recorded-log screenshots/terminal/cloud-helm-install.txt",
+    "started": "2026-10-17T18:10:00.469Z",
+    "finished": "2026-10-17T18:10:01.029Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/cloud-helm-install.txt",
+      "sha256": "512738e85c44dd0c9d5c6ce4e8578c816b2a29650332b9e9993e4e5268e11f91"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "cloud-helm-upgrade",
+    "command": "view-recorded-log screenshots/terminal/cloud-helm-upgrade.txt",
+    "started": "2026-10-17T18:10:01.535Z",
+    "finished": "2026-10-17T18:10:02.097Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/cloud-helm-upgrade.txt",
+      "sha256": "713717b602a9cb1c705762bb44ad1454705a6ba4dcc3d279eb0dcf99da2c017c"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "cloud-hpa-load",
+    "command": "view-recorded-log screenshots/terminal/cloud-hpa-load.txt",
+    "started": "2026-10-17T18:10:02.602Z",
+    "finished": "2026-10-17T18:10:03.171Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/cloud-hpa-load.txt",
+      "sha256": "4dc0e6777fc1d956f6c7a856eadd350e9c398da3eb2f51e500e0832989243ce7"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "cloud-hpa-pods",
+    "command": "view-recorded-log screenshots/terminal/cloud-hpa-pods.txt",
+    "started": "2026-10-17T18:10:03.676Z",
+    "finished": "2026-10-17T18:10:04.258Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/cloud-hpa-pods.txt",
+      "sha256": "9821a28b170953c1c2c89778cd6b7386633ff21e639b888798d4cac43c7d0d10"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "cloud-image-import",
+    "command": "view-recorded-log screenshots/terminal/cloud-image-import.txt",
+    "started": "2026-10-17T18:10:04.762Z",
+    "finished": "2026-10-17T18:10:05.349Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/cloud-image-import.txt",
+      "sha256": "67c6f0e443c1c7f45db0c9563aeb82fe3151b20345380151e9483b0fc3ca1005"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "cloud-image-transfer",
+    "command": "view-recorded-log screenshots/terminal/cloud-image-transfer.txt",
+    "started": "2026-10-17T18:10:05.855Z",
+    "finished": "2026-10-17T18:10:06.429Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/cloud-image-transfer.txt",
+      "sha256": "c1fce35f07fd089fa319a849b294229c40314e08bb958ab24481a3b118a9685d"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "cloud-monitoring-install",
+    "command": "view-recorded-log screenshots/terminal/cloud-monitoring-install.txt",
+    "started": "2026-10-17T18:10:06.935Z",
+    "finished": "2026-10-17T18:10:07.493Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/cloud-monitoring-install.txt",
+      "sha256": "f25e27591e4c738d042b6732bef60a87a9b45117f69a1d5c3975a87c0293f9de"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "cloud-nodes",
+    "command": "view-recorded-log screenshots/terminal/cloud-nodes.txt",
+    "started": "2026-10-17T18:10:07.998Z",
+    "finished": "2026-10-17T18:10:08.561Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/cloud-nodes.txt",
+      "sha256": "a1b085bda1f78d902493cea999ba15627f9ea9571c67051c932f8ad58860709a"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "cloud-observability",
+    "command": "view-recorded-log screenshots/terminal/cloud-observability.txt",
+    "started": "2026-10-17T18:10:09.067Z",
+    "finished": "2026-10-17T18:10:09.640Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/cloud-observability.txt",
+      "sha256": "48fabe07f863772400eebe88870c0cb08b1b314cd2b3525d271aa2a3a111e53b"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "cloud-recovery-check",
+    "command": "view-recorded-log screenshots/terminal/cloud-recovery-check.txt",
+    "started": "2026-10-17T18:10:10.146Z",
+    "finished": "2026-10-17T18:10:10.717Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/cloud-recovery-check.txt",
+      "sha256": "b571c8f8255e1615ca7b83988056ae53feb131db7d547e3f343d6920d0fcefb1"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "cloud-running",
+    "command": "view-recorded-log screenshots/terminal/cloud-running.txt",
+    "started": "2026-10-17T18:10:11.224Z",
+    "finished": "2026-10-17T18:10:11.806Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/cloud-running.txt",
+      "sha256": "61d3dee264ff9cab963e96c911278c791d999879db72c14a779da78348f8347f"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "cloud-troubleshooting",
+    "command": "view-recorded-log screenshots/terminal/cloud-troubleshooting.txt",
+    "started": "2026-10-17T18:10:12.312Z",
+    "finished": "2026-10-17T18:10:12.889Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/cloud-troubleshooting.txt",
+      "sha256": "48132ee07262ee0bde1fa8f4a0ce96fa3275d93884f921a426e0a18bcd0b9764"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "cloud-updated-images",
+    "command": "view-recorded-log screenshots/terminal/cloud-updated-images.txt",
+    "started": "2026-10-17T18:10:13.395Z",
+    "finished": "2026-10-17T18:10:13.970Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/cloud-updated-images.txt",
+      "sha256": "d73f18d7bf0b1ecec46f93ae7139a8fe9c40710dd802129cdac5569bcc391ad0"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "compose-build",
+    "command": "view-recorded-log screenshots/terminal/compose-build.txt",
+    "started": "2026-10-17T18:10:14.476Z",
+    "finished": "2026-10-17T18:10:15.049Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/compose-build.txt",
+      "sha256": "208c19c83d80e415e3660fc57b099506483f16818da19ee60d45eaff9edeb856"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "compose-clean",
+    "command": "view-recorded-log screenshots/terminal/compose-clean.txt",
+    "started": "2026-10-17T18:10:15.553Z",
+    "finished": "2026-10-17T18:10:16.110Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/compose-clean.txt",
+      "sha256": "8227453f606716a93d2a892307c1534887e71bcf224e0d708e9a37b2732068d0"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "compose-ps",
+    "command": "view-recorded-log screenshots/terminal/compose-ps.txt",
+    "started": "2026-10-17T18:10:16.616Z",
+    "finished": "2026-10-17T18:10:17.180Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/compose-ps.txt",
+      "sha256": "2c0f31aec6783749d1883af2f66abbeb37f434f0bd443e331f94743bb153061e"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "database",
+    "command": "view-recorded-log screenshots/terminal/database.txt",
+    "started": "2026-10-17T18:10:17.686Z",
+    "finished": "2026-10-17T18:10:18.247Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/database.txt",
+      "sha256": "d8a17990b957b48dbb15b21ee79a7bfc5f22b8e57d2007e40f630403b51d00a4"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "git-publish",
+    "command": "view-recorded-log screenshots/terminal/git-publish.txt",
+    "started": "2026-10-17T18:10:18.753Z",
+    "finished": "2026-10-17T18:10:19.321Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/git-publish.txt",
+      "sha256": "c2cfbdf0e2b8ff89fdd28c1a39ffd1140b3820c56ef91fa762dbb62c543b8d07"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "git-review",
+    "command": "view-recorded-log screenshots/terminal/git-review.txt",
+    "started": "2026-10-17T18:10:19.825Z",
+    "finished": "2026-10-17T18:10:20.405Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/git-review.txt",
+      "sha256": "ed710b0e786214bf7df32cb7a9f0e243b1a83156538dc4f9d8bba58e2132c36f"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "gitops",
+    "command": "view-recorded-log screenshots/terminal/gitops.txt",
+    "started": "2026-10-17T18:10:20.912Z",
+    "finished": "2026-10-17T18:10:21.489Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/gitops.txt",
+      "sha256": "e2da429467ceac7c14e09142ae391ea191aa21f04dd2b1e654c90a030972e54e"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "helm",
+    "command": "view-recorded-log screenshots/terminal/helm.txt",
+    "started": "2026-10-17T18:10:21.994Z",
+    "finished": "2026-10-17T18:10:22.571Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/helm.txt",
+      "sha256": "a007356531fd30b4eb651300f55976da4ae0c2bbd7d839fa4a9481b740060cf8"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "hpa-load",
+    "command": "view-recorded-log screenshots/terminal/hpa-load.txt",
+    "started": "2026-10-17T18:10:23.078Z",
+    "finished": "2026-10-17T18:10:23.658Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/hpa-load.txt",
+      "sha256": "10cdb777a952f937b86bff6e961add8d856d33d30c1356895075dcf28e8416d2"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "hpa-pods",
+    "command": "view-recorded-log screenshots/terminal/hpa-pods.txt",
+    "started": "2026-10-17T18:10:24.162Z",
+    "finished": "2026-10-17T18:10:24.759Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/hpa-pods.txt",
+      "sha256": "e5f418c41268f2aeeab4fb4ba8e836e4ba1f02206a7e88704a473d2f7e73c04f"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "image-release",
+    "command": "view-recorded-log screenshots/terminal/image-release.txt",
+    "started": "2026-10-17T18:10:25.264Z",
+    "finished": "2026-10-17T18:10:25.830Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/image-release.txt",
+      "sha256": "77a69ec4dc9c978258e8de63a978f0c0e75c10d289bc8844bda4716de8a0e96c"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "k3s-ready",
+    "command": "view-recorded-log screenshots/terminal/k3s-ready.txt",
+    "started": "2026-10-17T18:10:26.336Z",
+    "finished": "2026-10-17T18:10:26.892Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/k3s-ready.txt",
+      "sha256": "247090e9252e8100d11a518892d2eafc96705a629dace47ff34662d8074a761f"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "kubeconfig-tunnel",
+    "command": "view-recorded-log screenshots/terminal/kubeconfig-tunnel.txt",
+    "started": "2026-10-17T18:10:27.398Z",
+    "finished": "2026-10-17T18:10:27.957Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/kubeconfig-tunnel.txt",
+      "sha256": "5dc502b956450d31a35f63f1d1c073b4b8769bb6f8ebabc166124619386dbacc"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "kubernetes-metrics",
+    "command": "view-recorded-log screenshots/terminal/kubernetes-metrics.txt",
+    "started": "2026-10-17T18:10:28.462Z",
+    "finished": "2026-10-17T18:10:29.033Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/kubernetes-metrics.txt",
+      "sha256": "6dac50384b86ebc26ed95462d02e9bea2febfff60ef7d74a06c0f660b15e74cd"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "kubernetes-pods",
+    "command": "view-recorded-log screenshots/terminal/kubernetes-pods.txt",
+    "started": "2026-10-17T18:10:29.538Z",
+    "finished": "2026-10-17T18:10:30.141Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/kubernetes-pods.txt",
+      "sha256": "95bfc94d72e382f0fb5c3be80002e95b0836108c86b6922c2eaadd8c454fc0d6"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "kubernetes-services",
+    "command": "view-recorded-log screenshots/terminal/kubernetes-services.txt",
+    "started": "2026-10-17T18:10:30.646Z",
+    "finished": "2026-10-17T18:10:31.217Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/kubernetes-services.txt",
+      "sha256": "7a61a0dfaeef8f6d51978990c6070527a293b82993fbb5decb0cc87321f045e5"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "logs",
+    "command": "view-recorded-log screenshots/terminal/logs.txt",
+    "started": "2026-10-17T18:10:31.723Z",
+    "finished": "2026-10-17T18:10:32.302Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/logs.txt",
+      "sha256": "1a137f1429de631299c779102f56b4f4ec5d183c562fd179bd0fed4cdca3425c"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "metrics",
+    "command": "view-recorded-log screenshots/terminal/metrics.txt",
+    "started": "2026-10-17T18:10:32.808Z",
+    "finished": "2026-10-17T18:10:33.393Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/metrics.txt",
+      "sha256": "7ba212673f310e47047a566a7008b1da976d7775432d3c1331a84d55a56786b4"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "non-root",
+    "command": "view-recorded-log screenshots/terminal/non-root.txt",
+    "started": "2026-10-17T18:10:33.897Z",
+    "finished": "2026-10-17T18:10:34.457Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/non-root.txt",
+      "sha256": "879bee5cbb23b3c21f8f8e32b539d1967bc33d5e7a271c582885a6638e6d7008"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "pytest",
+    "command": "python -m pytest -v backend/tests",
+    "started": "2026-10-17T18:10:34.964Z",
+    "finished": "2026-10-17T18:10:36.458Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "fresh-command",
+    "source": null,
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "service-check-first-attempt",
+    "command": "view-recorded-log screenshots/terminal/service-check-first-attempt.txt",
+    "started": "2026-10-17T18:10:36.963Z",
+    "finished": "2026-10-17T18:10:37.556Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/service-check-first-attempt.txt",
+      "sha256": "b97612fcdc9fab95179b4dd5ebceb5ef56570c7ec69d953a44d295f6b91788be"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "ssh-firewall-update",
+    "command": "view-recorded-log screenshots/terminal/ssh-firewall-update.txt",
+    "started": "2026-10-17T18:10:38.061Z",
+    "finished": "2026-10-17T18:10:38.633Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/ssh-firewall-update.txt",
+      "sha256": "9c3e7e9425757e9104f0b562c72d2d7d390bf93051beba5b162dd0e77ec639b5"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "terraform-apply",
+    "command": "view-recorded-log screenshots/terminal/terraform-apply.txt",
+    "started": "2026-10-17T18:10:39.138Z",
+    "finished": "2026-10-17T18:10:39.740Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/terraform-apply.txt",
+      "sha256": "57574873b842a37b6c4e760abeabf6d7e15b2b5f5836ad8126451a456b2c0c5e"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "terraform-destroy",
+    "command": "view-recorded-log screenshots/terminal/terraform-destroy.txt",
+    "started": "2026-10-17T18:10:40.245Z",
+    "finished": "2026-10-17T18:10:40.823Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/terraform-destroy.txt",
+      "sha256": "295b0808806fad26fdc70f1ddbf9e83b8ef12dcfbef7f4de447f414ee31b00f7"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "terraform-init",
+    "command": "view-recorded-log screenshots/terminal/terraform-init.txt",
+    "started": "2026-10-17T18:10:41.328Z",
+    "finished": "2026-10-17T18:10:41.883Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/terraform-init.txt",
+      "sha256": "2f540b9b1ff68a2abf562e47ded7cc1b2f9ea7d03ea7da1b3c0399bf68aaeff9"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "terraform-plan",
+    "command": "view-recorded-log screenshots/terminal/terraform-plan.txt",
+    "started": "2026-10-17T18:10:42.388Z",
+    "finished": "2026-10-17T18:10:42.969Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/terraform-plan.txt",
+      "sha256": "254ff1ba284a97ef6016efb04e5ad1e513d65cac71984d749afb95b48af84a5e"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "terraform-validate",
+    "command": "view-recorded-log screenshots/terminal/terraform-validate.txt",
+    "started": "2026-10-17T18:10:43.476Z",
+    "finished": "2026-10-17T18:10:44.044Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/terraform-validate.txt",
+      "sha256": "eeef899f0425e4efd99f22a6c680f7cfee4b87692cae236193203c9b6fc00258"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "troubleshooting-recovered",
+    "command": "view-recorded-log screenshots/terminal/troubleshooting-recovered.txt",
+    "started": "2026-10-17T18:10:44.551Z",
+    "finished": "2026-10-17T18:10:45.117Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/troubleshooting-recovered.txt",
+      "sha256": "a539cce1c49e322fad98dabb99171453cdc35ebb34703e18c1abfaa8e179fabd"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  },
+  {
+    "name": "troubleshooting",
+    "command": "view-recorded-log screenshots/terminal/troubleshooting.txt",
+    "started": "2026-10-17T18:10:45.623Z",
+    "finished": "2026-10-17T18:10:46.204Z",
+    "exitCode": 0,
+    "expected": 0,
+    "host": "Kartiks-MacBook-Air.local",
+    "user": "kartik",
+    "platform": "darwin",
+    "shell": "/bin/zsh",
+    "client": "Live browser terminal",
+    "kind": "recorded-log-view",
+    "source": {
+      "path": "screenshots/terminal/troubleshooting.txt",
+      "sha256": "6539da755cdd7a6c782eb0c3cbd8ae194ff081dac824bc8195978e2cae75d2c3"
+    },
+    "dimensions": {
+      "cols": 122,
+      "rows": 33
+    }
+  }
+]

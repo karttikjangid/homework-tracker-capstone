@@ -1,0 +1,33 @@
+kartik@Kartiks-MacBook-Air homework-tracker-capstone % view-recorded-log screenshots/terminal/cloud-nodes.txt
+Kartiks-MacBook-Air:session21-python $ kubectl get nodes -o wide
+NAME                 STATUS   ROLES           AGE    VERSION        INTERNAL-IP   EXTERNAL-IP   OS-IMAGE             KERNE
+L-VERSION             CONTAINER-RUNTIME
+session21-homework   Ready    control-plane   4h8m   v1.36.5+k3s1   10.21.1.4     <none>        Ubuntu 22.04.5 LTS   6.8.0
+-1070-azure (amd64)   containerd://2.3.4-k3s1.36
+
+Recorded log view: cloud-nodes.txt
+Original transcript retained; commands are not re-run by this viewer.
+kartik@Kartiks-MacBook-Air homework-tracker-capstone % 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

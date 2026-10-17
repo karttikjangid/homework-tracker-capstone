@@ -1,0 +1,33 @@
+kartik@Kartiks-MacBook-Air homework-tracker-capstone % view-recorded-log screenshots/terminal/cloud-hpa-load.txt
+  ScalingLimited  True    TooManyReplicas   the desired replica count is more than the maximum replica count
+Events:
+  Type     Reason                        Age                From                       Message
+  ----     ------                        ----               ----                       -------
+  Warning  FailedGetResourceMetric       19m (x3 over 20m)  horizontal-pod-autoscaler  failed to get cpu utilization: unab
+le to get metrics for resource cpu: no metrics re
+turned from resource metrics API
+  Warning  FailedComputeMetricsReplicas  19m (x3 over 20m)  horizontal-pod-autoscaler  invalid metrics (1 invalid out of 1
+), first error is: failed to get cpu resource met
+ric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metric
+s API
+  Warning  FailedGetResourceMetric       19m (x2 over 19m)  horizontal-pod-autoscaler  failed to get cpu utilization: did 
+not receive metrics for targeted pods (pods might
+ be unready)
+  Warning  FailedComputeMetricsReplicas  19m (x2 over 19m)  horizontal-pod-autoscaler  invalid metrics (1 invalid out of 1
+), first error is: failed to get cpu resource met
+ric value: failed to get cpu utilization: did not receive metrics for targeted pods (pods might be unready)
+  Normal   SuccessfulRescale             25s                horizontal-pod-autoscaler  New size: 4; reason: cpu resource u
+tilization (percentage of request) above target
++ cleanup
++ kubectl -n session21 delete job capstone-load --ignore-not-found
+job.batch "capstone-load" deleted from session21 namespace
+
+Recorded log view: cloud-hpa-load.txt
+Original transcript retained; commands are not re-run by this viewer.
+kartik@Kartiks-MacBook-Air homework-tracker-capstone % 
+
+
+
+
+
+

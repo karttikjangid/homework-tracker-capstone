@@ -1,0 +1,33 @@
+kartik@Kartiks-MacBook-Air homework-tracker-capstone % view-recorded-log screenshots/terminal/service-check-first-attempt.
+txt
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: broken-service
+      uid: ef822127-ef85-4f6d-8f22-2f69e3ec8449
+    resourceVersion: "1299"
+    uid: a2eedf7e-ce1a-4d0a-9c13-012b4ed5abeb
+  ports:
+  - name: ""
+    port: 8080
+    protocol: TCP
+kind: List
+metadata:
+  resourceVersion: ""
++ kubectl -n session21 exec deployment/homework-frontend -- wget -qO- http://broken-service:8080/
+wget: can't connect to remote host (10.96.69.23): Operation timed out
+command terminated with exit code 1
++ cleanup
++ kubectl -n session21 delete deployment/taskboard-broken-image service/broken-service --ignore-not-found
+deployment.apps "taskboard-broken-image" deleted from session21 namespace
+service "broken-service" deleted from session21 namespace
+
+Recorded log view: service-check-first-attempt.txt
+Original transcript retained; commands are not re-run by this viewer.
+kartik@Kartiks-MacBook-Air homework-tracker-capstone % 
+
+
+
+
+

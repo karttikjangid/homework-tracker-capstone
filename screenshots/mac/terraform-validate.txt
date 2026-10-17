@@ -1,0 +1,33 @@
+kartik@Kartiks-MacBook-Air homework-tracker-capstone % view-recorded-log screenshots/terminal/terraform-validate.txt
+Kartiks-MacBook-Air:azure-terraform $ terraform fmt -check && terraform validate -no-color
+Success! The configuration is valid.
+
+Recorded log view: terraform-validate.txt
+Original transcript retained; commands are not re-run by this viewer.
+kartik@Kartiks-MacBook-Air homework-tracker-capstone % 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

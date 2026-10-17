@@ -1,0 +1,33 @@
+kartik@Kartiks-MacBook-Air homework-tracker-capstone % view-recorded-log screenshots/terminal/cloud-hpa-pods.txt
+horizontalpodautoscaler.autoscaling/homework-backend   Deployment/homework-backend   cpu: 231%/60%   2         4         4
+          20m
+
+NAME                                     READY   STATUS        RESTARTS   AGE
+pod/capstone-load-d2x4m                  1/1     Terminating   0          43s
+pod/homework-backend-f4dcf97d9-fd5mx     1/1     Running       0          20m
+pod/homework-backend-f4dcf97d9-jsqdp     1/1     Running       0          28s
+pod/homework-backend-f4dcf97d9-scwcs     1/1     Running       0          20m
+pod/homework-backend-f4dcf97d9-zp26g     1/1     Running       0          28s
+pod/homework-frontend-778d68bbd5-2lg8q   1/1     Running       0          20m
+pod/homework-frontend-778d68bbd5-c78vb   1/1     Running       0          20m
+pod/postgres-cf49944ff-7x7sh             1/1     Running       0          20m
+NAME                                 CPU(cores)   MEMORY(bytes)   
+capstone-load-d2x4m                  206m         6Mi             
+homework-backend-f4dcf97d9-fd5mx     141m         63Mi            
+homework-backend-f4dcf97d9-jsqdp     298m         15Mi            
+homework-backend-f4dcf97d9-scwcs     90m          65Mi            
+homework-backend-f4dcf97d9-zp26g     298m         16Mi            
+homework-frontend-778d68bbd5-2lg8q   1m           3Mi             
+homework-frontend-778d68bbd5-c78vb   1m           3Mi             
+postgres-cf49944ff-7x7sh             111m         42Mi            
+
+Recorded log view: cloud-hpa-pods.txt
+Original transcript retained; commands are not re-run by this viewer.
+kartik@Kartiks-MacBook-Air homework-tracker-capstone % 
+
+
+
+
+
+
+

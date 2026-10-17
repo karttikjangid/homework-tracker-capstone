@@ -1,0 +1,33 @@
+kartik@Kartiks-MacBook-Air homework-tracker-capstone % view-recorded-log screenshots/terminal/ci-release-approved.txt
+ANNOTATIONS
+! Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/che
+ckout@v4, actions/setup-node@v4, actions/setup-py
+thon@v5, actions/upload-artifact@v4, azure/setup-helm@v4, docker/login-action@v3. For more information see: https://github
+.blog/changelog/2025-09-19-deprecation-of-node-20
+-on-github-actions-runners/
+build-test-deploy: .github#2
+
+
+ARTIFACTS
+session21-live-terminal
+session21-monitoring
+session21-scans
+homework-tracker-images
+
+For more information about the job, try: gh run view --job=116687730136
+View this run on GitHub: https://github.com/karttikjangid/homework-tracker-capstone/actions/runs/38812142701
+
+
+A new release of gh is available: 2.100.0 → 2.102.0
+To upgrade, run: brew upgrade gh
+https://github.com/cli/cli/releases/tag/v2.102.0
+
+Recorded log view: ci-release-approved.txt
+Original transcript retained; commands are not re-run by this viewer.
+kartik@Kartiks-MacBook-Air homework-tracker-capstone % 
+
+
+
+
+
+

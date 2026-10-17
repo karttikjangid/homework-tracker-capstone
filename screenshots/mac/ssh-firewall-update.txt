@@ -1,0 +1,33 @@
+kartik@Kartiks-MacBook-Air homework-tracker-capstone % view-recorded-log screenshots/terminal/ssh-firewall-update.txt
+              + source_port_range                          = "*"
+              + source_port_ranges                         = []
+            },
+        ]
+        tags                = {}
+        # (2 unchanged attributes hidden)
+    }
+
+Plan: 0 to add, 1 to change, 0 to destroy.
+azurerm_network_security_group.homework: Modifying... [id=/subscriptions/2f111b0c-fed8-4dd0-8ec8-8ade2e139009/resourceGrou
+ps/session21-homework/providers/Microsoft.Network
+/networkSecurityGroups/homework-nsg]
+azurerm_network_security_group.homework: Modifications complete after 4s [id=/subscriptions/2f111b0c-fed8-4dd0-8ec8-8ade2e
+139009/resourceGroups/session21-homework/provider
+s/Microsoft.Network/networkSecurityGroups/homework-nsg]
+
+Apply complete! Resources: 0 added, 1 changed, 0 destroyed.
+
+Outputs:
+
+public_ip = "20.204.56.74"
+resource_group = "session21-homework"
+
+Recorded log view: ssh-firewall-update.txt
+Original transcript retained; commands are not re-run by this viewer.
+kartik@Kartiks-MacBook-Air homework-tracker-capstone % 
+
+
+
+
+
+

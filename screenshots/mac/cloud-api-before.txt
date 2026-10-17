@@ -1,0 +1,33 @@
+kartik@Kartiks-MacBook-Air homework-tracker-capstone % view-recorded-log screenshots/terminal/cloud-api-before.txt
+Kartiks-MacBook-Air:session21-python $ curl -fsS -i http://$CAPSTONE_VM_IP/health && curl -fsS http://$CAPSTONE_VM_IP/api/
+tasks
+HTTP/1.1 200 OK
+Content-Length: 15
+Content-Type: application/json
+Date: Thu, 15 Oct 2026 21:26:49 GMT
+Server: nginx/1.30.6
+Vary: Origin
+
+Recorded log view: cloud-api-before.txt
+Original transcript retained; commands are not re-run by this viewer.
+kartik@Kartiks-MacBook-Air homework-tracker-capstone % 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

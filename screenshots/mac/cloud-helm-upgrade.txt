@@ -1,0 +1,33 @@
+kartik@Kartiks-MacBook-Air homework-tracker-capstone % view-recorded-log screenshots/terminal/cloud-helm-upgrade.txt
+Kartiks-MacBook-Air:capstone $ helm upgrade homework ./helm/taskboard -n session21 --set ingress.className=traefik --set i
+ngress.host='' --wait --timeout 240s
+Release "homework" has been upgraded. Happy Helming!
+NAME: homework
+LAST DEPLOYED: Fri Oct 16 03:25:04 2026
+NAMESPACE: session21
+STATUS: deployed
+REVISION: 2
+DESCRIPTION: Upgrade complete
+TEST SUITE: None
+
+Recorded log view: cloud-helm-upgrade.txt
+Original transcript retained; commands are not re-run by this viewer.
+kartik@Kartiks-MacBook-Air homework-tracker-capstone % 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

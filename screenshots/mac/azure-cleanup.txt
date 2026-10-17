@@ -1,0 +1,33 @@
+kartik@Kartiks-MacBook-Air homework-tracker-capstone % view-recorded-log screenshots/terminal/azure-cleanup.txt
+Kartiks-MacBook-Air:azure-terraform $ az group exists --name session21-homework && terraform state list && test "$(az grou
+p exists --name session21-homework)" = false
+false
+
+Recorded log view: azure-cleanup.txt
+Original transcript retained; commands are not re-run by this viewer.
+kartik@Kartiks-MacBook-Air homework-tracker-capstone % 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

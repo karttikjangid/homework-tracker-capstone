@@ -1,0 +1,33 @@
+kartik@Kartiks-MacBook-Air homework-tracker-capstone % view-recorded-log screenshots/terminal/cloud-recovery-check.txt
+Kartiks-MacBook-Air:capstone $ kubectl -n session21 get pods,svc && curl -fsS http://20.204.56.74/health && kubectl -n ses
+sion21 exec deployment/homework-frontend -- wget 
+-T 5 -qO- http://backend:8000/ready
+NAME                                     READY   STATUS    RESTARTS   AGE
+pod/homework-backend-f4dcf97d9-fd5mx     1/1     Running   0          28m
+pod/homework-backend-f4dcf97d9-scwcs     1/1     Running   0          28m
+pod/homework-frontend-778d68bbd5-2lg8q   1/1     Running   0          28m
+pod/homework-frontend-778d68bbd5-c78vb   1/1     Running   0          28m
+pod/postgres-cf49944ff-7x7sh             1/1     Running   0          28m
+
+NAME                        TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
+service/backend             ClusterIP   10.43.66.105    <none>        8000/TCP   28m
+service/homework-frontend   ClusterIP   10.43.146.189   <none>        80/TCP     28m
+service/postgres            ClusterIP   10.43.33.35     <none>        5432/TCP   28m
+
+Recorded log view: cloud-recovery-check.txt
+Original transcript retained; commands are not re-run by this viewer.
+kartik@Kartiks-MacBook-Air homework-tracker-capstone % 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

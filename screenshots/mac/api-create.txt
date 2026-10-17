@@ -1,0 +1,33 @@
+kartik@Kartiks-MacBook-Air homework-tracker-capstone % view-recorded-log screenshots/terminal/api-create.txt
+runnervm8k3b6:homework-tracker-capstone $ curl -fsS -i -X POST http://localhost:8000/api/tasks -H 'Content-Type: applicati
+on/json' -d '{"title":"Capstone terminal demonstr
+ation","session_number":21,"due_date":"2026-10-16","assignee":"Kartik","priority":"HIGH"}'
+HTTP/1.1 201 Created
+date: Thu, 15 Oct 2026 21:46:43 GMT
+server: uvicorn
+content-length: 208
+content-type: application/json
+vary: Origin
+
+{"title":"Capstone terminal demonstration","description":"","priority":"HIGH","status":"TODO","assignee":"Kartik","session
+_number":21,"due_date":"2026-10-16","id":1,"creat
+
+Recorded log view: api-create.txt
+Original transcript retained; commands are not re-run by this viewer.
+kartik@Kartiks-MacBook-Air homework-tracker-capstone % 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

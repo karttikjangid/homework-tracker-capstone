@@ -1,0 +1,33 @@
+kartik@Kartiks-MacBook-Air homework-tracker-capstone % view-recorded-log screenshots/terminal/api-read-update.txt
+runnervm8k3b6:homework-tracker-capstone $ TASK_ID=$(curl -fsS http://localhost:8000/api/tasks | python -c 'import json,sys
+; print(json.load(sys.stdin)[0]["id"])'); curl -f
+sS -i http://localhost:8000/api/tasks/$TASK_ID && curl -fsS -i -X PUT http://localhost:8000/api/tasks/$TASK_ID -H 'Content
+-Type: application/json' -d '{"status":"DONE"}'
+HTTP/1.1 200 OK
+date: Thu, 15 Oct 2026 21:46:45 GMT
+server: uvicorn
+content-length: 208
+content-type: application/json
+vary: Origin
+
+{"title":"Capstone terminal demonstration","description":"","priority":"HIGH","status":"TODO","assignee":"Kartik","session
+_number":21,"due_date":"2026-10-16","id":1,"creat
+ed_at":"2026-10-15T21:46:43.166518Z"}HTTP/1.1 200 OK
+date: Thu, 15 Oct 2026 21:46:45 GMT
+server: uvicorn
+content-length: 208
+content-type: application/json
+vary: Origin
+
+{"title":"Capstone terminal demonstration","description":"","priority":"HIGH","status":"DONE","assignee":"Kartik","session
+_number":21,"due_date":"2026-10-16","id":1,"creat
+
+Recorded log view: api-read-update.txt
+Original transcript retained; commands are not re-run by this viewer.
+kartik@Kartiks-MacBook-Air homework-tracker-capstone % 
+
+
+
+
+
+

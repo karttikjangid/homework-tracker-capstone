@@ -1,0 +1,33 @@
+kartik@Kartiks-MacBook-Air homework-tracker-capstone % view-recorded-log screenshots/terminal/azure-vm-current.txt
+Kartiks-MacBook-Air:session21-python $ az vm show -g session21-homework -n session21-homework -d --query '{name:name,size:
+hardwareProfile.vmSize,power:powerState,ip:public
+Ips}' -o table
+Name                Size               Power       Ip
+------------------  -----------------  ----------  ------------
+session21-homework  Standard_B2als_v2  VM running  20.204.56.74
+
+Recorded log view: azure-vm-current.txt
+Original transcript retained; commands are not re-run by this viewer.
+kartik@Kartiks-MacBook-Air homework-tracker-capstone % 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

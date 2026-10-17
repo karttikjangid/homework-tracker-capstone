@@ -1,0 +1,33 @@
+kartik@Kartiks-MacBook-Air homework-tracker-capstone % view-recorded-log screenshots/terminal/troubleshooting.txt
+  ports:
+  - name: ""
+    port: 8080
+    protocol: TCP
+kind: List
+metadata:
+  resourceVersion: ""
++ reachable=false
++ for attempt in {1..10}
++ kubectl -n session21 exec deployment/homework-frontend -- wget -T 5 -qO- http://broken-service:8080/
+<!doctype html><html><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><t
+itle>Homework Tracker</title>  <script type="modu
+le" crossorigin src="/assets/index-CYqa5jmU.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DkMuKOF6.css">
+</head><body><div id="root"></div></body></html>
++ reachable=true
++ break
++ [[ true == true ]]
++ cleanup
++ kubectl -n session21 delete deployment/taskboard-broken-image service/broken-service --ignore-not-found
+deployment.apps "taskboard-broken-image" deleted from session21 namespace
+service "broken-service" deleted from session21 namespace
+
+Recorded log view: troubleshooting.txt
+Original transcript retained; commands are not re-run by this viewer.
+kartik@Kartiks-MacBook-Air homework-tracker-capstone % 
+
+
+
+
+
+

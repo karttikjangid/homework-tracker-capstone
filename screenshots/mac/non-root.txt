@@ -1,0 +1,33 @@
+kartik@Kartiks-MacBook-Air homework-tracker-capstone % view-recorded-log screenshots/terminal/non-root.txt
+runnervm8k3b6:homework-tracker-capstone $ docker compose -p session21-evidence exec -T backend id && docker compose -p ses
+sion21-evidence exec -T frontend id
+uid=10001(appuser) gid=10001(appuser) groups=10001(appuser)
+uid=101(nginx) gid=101(nginx) groups=101(nginx),101(nginx)
+
+Recorded log view: non-root.txt
+Original transcript retained; commands are not re-run by this viewer.
+kartik@Kartiks-MacBook-Air homework-tracker-capstone % 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+kartik@Kartiks-MacBook-Air homework-tracker-capstone % view-recorded-log screenshots/terminal/cloud-helm-install.txt
+Kartiks-MacBook-Air:session21-python $ helm upgrade --install homework ./helm/taskboard -n session21 --create-namespace --
+set ingress.className=traefik --set ingress.host=
+'' --wait --timeout 240s
+Release "homework" does not exist. Installing it now.
+NAME: homework
+LAST DEPLOYED: Fri Oct 16 02:55:40 2026
+NAMESPACE: session21
+STATUS: deployed
+REVISION: 1
+DESCRIPTION: Install complete
+TEST SUITE: None
+
+Recorded log view: cloud-helm-install.txt
+Original transcript retained; commands are not re-run by this viewer.
+kartik@Kartiks-MacBook-Air homework-tracker-capstone % 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

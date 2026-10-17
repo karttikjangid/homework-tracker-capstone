@@ -1,0 +1,33 @@
+kartik@Kartiks-MacBook-Air homework-tracker-capstone % view-recorded-log screenshots/terminal/compose-clean.txt
+runnervm8k3b6:homework-tracker-capstone $ docker compose -p session21-evidence down -v --remove-orphans
+WARN[0000] Warning: No resource found to remove for project "session21-evidence". 
+
+Recorded log view: compose-clean.txt
+Original transcript retained; commands are not re-run by this viewer.
+kartik@Kartiks-MacBook-Air homework-tracker-capstone % 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

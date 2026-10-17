@@ -1,0 +1,33 @@
+kartik@Kartiks-MacBook-Air homework-tracker-capstone % view-recorded-log screenshots/terminal/cloud-image-transfer.txt
+Kartiks-MacBook-Air:capstone $ scp -i "$CAPSTONE_SSH_KEY" -o UserKnownHostsFile="$CAPSTONE_KNOWN_HOSTS" -o StrictHostKeyCh
+ecking=yes -o ConnectTimeout=15 -o BatchMode=yes 
+"$CAPSTONE_IMAGES" student@"$CAPSTONE_VM_IP":/tmp/homework-tracker-images.tar.gz
+homework-tracker-images.tar.gz                                                                                            
+               100%   64MB   7.6MB/s   00:08    
+
+Recorded log view: cloud-image-transfer.txt
+Original transcript retained; commands are not re-run by this viewer.
+kartik@Kartiks-MacBook-Air homework-tracker-capstone % 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

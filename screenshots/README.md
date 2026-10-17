@@ -4,8 +4,9 @@
 
 | Directory | Contents |
 | --- | --- |
-| [presentation](presentation/) | macOS-style frames around the original terminal captures |
-| [terminal](terminal/) | Live terminal screenshots, paired output, command records and original recordings |
+| [mac](mac/) | Current live Mac zsh views, with recorded results and fresh test runs identified |
+| [presentation](presentation/) | Earlier frame-only versions, retained with their original sources |
+| [terminal](terminal/) | Original CI/Mac terminal captures, paired output, command records and recordings |
 | [verification](verification/) | Standalone CI reports, browser screenshots, checksums and verification metadata |
 | [archive](archive/) | Earlier coursework evidence, retained with its original dates |
 

@@ -1,0 +1,33 @@
+kartik@Kartiks-MacBook-Air homework-tracker-capstone % view-recorded-log screenshots/terminal/compose-build.txt
+ => => writing image sha256:d73ee7e5fce497fb3216c8a4a3ae75c590a34e3ab71ca5db20c4173a4e342159                              
+                                            0.0s
+ => => naming to docker.io/library/session21-evidence-backend                                                             
+                                            0.0s
+ => [backend] resolving provenance for metadata file                                                                      
+                                            0.0s
+[+] Running 7/7
+ ✔ backend                                    Built                                                                       
+                                            0.0s 
+ ✔ frontend                                   Built                                                                       
+                                            0.0s 
+ ✔ Network session21-evidence_default         Created                                                                     
+                                            0.1s 
+ ✔ Volume "session21-evidence_postgres-data"  Created                                                                     
+                                            0.0s 
+ ✔ Container session21-evidence-postgres-1    Healthy                                                                     
+                                           12.7s 
+ ✔ Container session21-evidence-backend-1     Healthy                                                                     
+                                           12.6s 
+ ✔ Container session21-evidence-frontend-1    Healthy                                                                     
+                                           15.6s 
+
+Recorded log view: compose-build.txt
+Original transcript retained; commands are not re-run by this viewer.
+kartik@Kartiks-MacBook-Air homework-tracker-capstone % 
+
+
+
+
+
+
+
