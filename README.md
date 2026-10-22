@@ -100,6 +100,12 @@ The chart pins the approved application SHA `2b74cb7f4da3cbb2dccc8faaab52b23c68f
 
 [Full evidence and screenshots](docs/verification.md) · [Recorded walkthrough](docs/walkthrough.md) · [Troubleshooting](docs/troubleshooting.md)
 
+## Presentation
+
+[View slides (PDF)](https://github.com/karttikjangid/homework-tracker-capstone/releases/download/presentation-2026-10-22/homework-tracker-capstone.pdf) · [Download PowerPoint](https://github.com/karttikjangid/homework-tracker-capstone/releases/download/presentation-2026-10-22/homework-tracker-capstone.pptx)
+
+The 16-slide presentation covers the application, CI/CD, security, Azure infrastructure, Kubernetes, monitoring and troubleshooting. The PowerPoint includes speaker notes. [Recorded demonstration](docs/walkthrough.md).
+
 ## Documentation
 
 - [Development and API checks](docs/development.md): manual setup, tests and exact API commands.
