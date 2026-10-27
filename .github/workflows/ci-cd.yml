@@ -2,18 +2,6 @@ name: Homework Tracker CI/CD
 on:
   push:
     branches: [main]
-    paths:
-      - 'backend/**'
-      - 'frontend/**'
-      - 'helm/**'
-      - 'monitoring/**'
-      - 'terraform/**'
-      - 'k8s/**'
-      - 'scripts/**'
-      - 'security/**'
-      - 'gitops/**'
-      - 'docker-compose.yml'
-      - '.github/workflows/ci-cd.yml'
   workflow_dispatch:
 permissions:
   contents: read

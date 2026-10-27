@@ -17,10 +17,10 @@ The course document requires the complete DevOps flow, Terraform cloud infrastru
 | Observability | Application logs, Prometheus metrics/targets and Grafana dashboard |
 | GitOps | Argo CD project/Application, Git release values, reconciliation and self-healing |
 | Troubleshooting | Deliberately broken image/Service; investigation, fixes and verification |
-| Final demonstration | Committed slides in `demo/`, architecture diagram and key learnings; captioned preview with source tour and recorded evidence; voice narration pending |
+| Final demonstration | Committed slides in `demo/`, architecture diagram and key learnings; narrated video with source tour and recorded deployment evidence |
 
 The general course document specifies Terraform cloud infrastructure. The reference grading rubric specifically names AWS VPC/EKS. This submission deliberately uses Azure/K3s, as requested; it does not claim to provision AWS or managed EKS.
 
 The course reference and work from other sessions were not edited for this cross-check.
 
-The current M10 rubric requires a committed slide deck and a presentation video. [Demo materials](../../demo/README.md) include both slide formats and a captioned preview. The preview uses recorded deployment evidence; acceptance as the required live walkthrough remains unconfirmed. The [earlier course rubric](grading-session21-reference.md) is retained.
+The current M10 rubric requires a committed slide deck and a presentation video. [Demo materials](../../demo/README.md) include both slide formats and the narrated video. The video uses recorded deployment evidence; acceptance as the required live walkthrough remains unconfirmed. The [earlier course rubric](grading-session21-reference.md) is retained.

@@ -1,4 +1,6 @@
-# Recorded walkthrough
+# Original recorded walkthrough
+
+The [narrated presentation](../demo/README.md) includes the slides and a source-code tour. This page retains the original deployment recording and its source clips.
 
 [Watch or download the recording](../screenshots/capstone-walkthrough.mp4). It combines actual screen recordings from the final review. Some waits are sped up, as marked below. There is no narration.
 

@@ -6,11 +6,33 @@ Terminal views were refreshed in live Mac zsh on 17 October 2026. Recorded resul
 
 ![Successful pipeline](../screenshots/terminal/github-actions.png)
 
+## Repository and published images
+
+The standalone repository's ten most recent commits, captured on 27 October 2026:
+
+![Live Mac zsh: Ten capstone commits](../screenshots/mac/git-history-current.png)
+
+Both public packages publish the approved application SHA `2b74cb7f4da3cbb2dccc8faaab52b23c68f46f98`. These package pages were captured on 27 October 2026.
+
+![Public backend package with SHA-based image tags](../screenshots/verification/registry-backend.png)
+
+![Public frontend package with SHA-based image tags](../screenshots/verification/registry-frontend.png)
+
+## Application and deployment checks
+
 Eleven API/migration tests passed. SAST, dependency, secret and both image scans passed. [Test output](../screenshots/verification/standalone-review-tests.txt) · [Backend scan](../screenshots/verification/standalone-backend-scan.txt) · [Frontend scan](../screenshots/verification/standalone-frontend-scan.txt)
+
+Trivy scanned the frontend and backend container images for HIGH/CRITICAL vulnerabilities in their operating-system and application packages, with a nonzero exit code configured to block publication on findings. Both retained reports show zero findings for that recorded run; this is a result for those images and the vulnerability database used then, rather than a guarantee against future findings. Secret detection ran separately against the repository filesystem.
+
+![Recorded CI output in live Mac zsh: Backend Trivy image scan excerpt](../screenshots/mac/trivy-backend-ci.png)
+
+![Recorded CI output in live Mac zsh: Frontend Trivy image scan](../screenshots/mac/trivy-frontend-ci.png)
 
 ![Live Mac zsh: Tests in the live terminal](../screenshots/mac/pytest.png)
 
 The isolated Compose project started from an empty volume, rebuilt both application images and reached healthy status for all three services.
+
+![Recorded output in Mac zsh: Successful Compose build](../screenshots/mac/compose-build.png)
 
 ![Recorded output in Mac zsh: docker compose ps](../screenshots/mac/compose-ps.png)
 
@@ -22,6 +44,8 @@ The isolated Compose project started from an empty volume, rebuilt both applicat
 
 ![Recorded output in Mac zsh: Running Kubernetes Pods](../screenshots/mac/kubernetes-pods.png)
 
+![Recorded output in Mac zsh: Kubernetes Services](../screenshots/mac/kubernetes-services.png)
+
 ![Recorded output in Mac zsh: Helm release](../screenshots/mac/helm.png)
 
 ![Recorded output in Mac zsh: CPU autoscaling on Azure](../screenshots/mac/cloud-hpa-load.png)
@@ -29,6 +53,8 @@ The isolated Compose project started from an empty volume, rebuilt both applicat
 [HPA output](../screenshots/terminal/cloud-hpa-load.txt) shows two to four backend replicas under HTTP load. [CI GitOps state](../screenshots/verification/standalone-review-gitops.yaml) is Synced/Healthy after restoring a changed replica count. The rehearsal used the previous approved bootstrap image; the committed values now promote the standalone release.
 
 ![Recorded output in Mac zsh: GitOps reconciliation](../screenshots/mac/gitops.png)
+
+![Recorded output in Mac zsh: Backend Prometheus metrics](../screenshots/mac/metrics.png)
 
 ![Prometheus target UP on Azure](../screenshots/terminal/cloud-prometheus-targets.png)
 

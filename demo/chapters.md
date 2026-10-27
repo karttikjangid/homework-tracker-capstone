@@ -1,36 +1,36 @@
 # Video chapters
 
-The preview is 8 minutes 19 seconds including container rounding. It has no voice track yet.
+[Narrated presentation](https://github.com/karttikjangid/homework-tracker-capstone/releases/download/narrated-2026-10-27/presentation-video.mp4). Duration: 07:15.
 
 | Start | Section |
 | --- | --- |
 | 00:00 | Homework Tracker |
-| 00:08 | The application |
-| 00:16 | Application and delivery architecture |
-| 00:24 | API and database |
-| 00:32 | Automated tests |
-| 00:40 | Docker and Compose |
-| 00:48 | GitHub Actions and image delivery |
-| 00:56 | Security gates |
-| 01:04 | Terraform on Azure |
-| 01:12 | Kubernetes and Helm |
-| 01:20 | Autoscaling under load |
-| 01:28 | Prometheus and Grafana |
-| 01:36 | GitOps reconciliation |
-| 01:44 | Failure investigation and recovery |
-| 01:52 | Cleanup and project limits |
-| 02:00 | Key learnings |
-| 02:08 | Presentation demo and references |
-| 02:16 | Codebase overview |
-| 03:01 | Commit and push |
-| 03:16 | Tests, Compose and API verification |
-| 03:53 | Successful pipeline and published artifacts |
-| 04:02 | Terraform provisions Azure infrastructure |
-| 04:55 | Argo CD, Kubernetes and Helm verification |
-| 05:16 | Prometheus target UP |
-| 05:26 | Grafana request dashboard |
-| 05:37 | HPA under HTTP load |
-| 06:24 | Broken image and Service recovery |
+| 00:18 | The application |
+| 00:32 | Application and delivery architecture |
+| 00:58 | API and database |
+| 01:20 | Automated tests |
+| 01:34 | Docker and Compose |
+| 01:50 | GitHub Actions and image delivery |
+| 02:04 | Security gates |
+| 02:21 | Terraform on Azure |
+| 02:39 | Kubernetes and Helm |
+| 02:53 | Autoscaling under load |
+| 03:06 | Prometheus and Grafana |
+| 03:19 | GitOps reconciliation |
+| 03:33 | Failure investigation and recovery |
+| 03:52 | Cleanup and project limits |
+| 04:07 | Key learnings |
+| 04:24 | Presentation demo and references |
+| 04:41 | Codebase overview |
+| 05:02 | Commit and push |
+| 05:11 | Tests, Compose and API verification |
+| 05:22 | Successful pipeline and published artifacts |
+| 05:35 | Terraform provisions Azure infrastructure |
+| 05:48 | Argo CD, Kubernetes and Helm verification |
+| 06:02 | Prometheus target UP |
+| 06:11 | Grafana request dashboard |
+| 06:21 | HPA under HTTP load |
+| 06:29 | Broken image and Service recovery |
 | 06:39 | Release upgrade and PostgreSQL persistence |
-| 07:27 | Application after the upgrade |
-| 07:32 | Terraform cleanup |
+| 06:49 | Application after the upgrade |
+| 06:58 | Terraform cleanup |
