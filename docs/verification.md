@@ -2,7 +2,7 @@
 
 Terminal views were refreshed in live Mac zsh on 17 October 2026. Recorded results retain their original dates; the local pytest suite was re-run. [Capture details](../screenshots/mac/README.md) and [original records](../screenshots/terminal/) are retained.
 
-[Successful standalone pipeline](https://github.com/karttikjangid/homework-tracker-capstone/actions/runs/38812142701), application image SHA `2b74cb7f4da3cbb2dccc8faaab52b23c68f46f98`. The chart defaults promote this release. Later commits contain documentation and evidence.
+[Successful standalone pipeline](https://github.com/karttikjangid/homework-tracker-capstone/actions/runs/38812142701), application image SHA `2b74cb7f4da3cbb2dccc8faaab52b23c68f46f98`. These screenshots document the original release; the current patched image promotion is recorded below. Later commits contain documentation and evidence.
 
 ![Successful pipeline](../screenshots/terminal/github-actions.png)
 
@@ -73,3 +73,7 @@ The isolated Compose project started from an empty volume, rebuilt both applicat
 Terraform destroyed all nine resources. Azure returned `false` for the resource-group existence check; the SSH tunnel and monitoring forwards have stopped. The cloud URL is no longer hosted.
 
 [Recorded walkthrough and chapters](walkthrough.md) · [Video](../screenshots/capstone-walkthrough.mp4) · [Image archive checksum](../screenshots/verification/release-images.json) · [Pipeline metadata](../screenshots/verification/standalone-ci-run.json)
+
+## 27 October runtime security update
+
+The [patched image pipeline](https://github.com/karttikjangid/homework-tracker-capstone/actions/runs/40482257507) passed the complete test, security, Compose, Kubernetes, HPA, recovery, monitoring and GitOps checks. It publishes SHA `3ed8bf722561b28c71d1e3861dcbc741bd3ff4b1`. The chart and GitOps defaults now promote these patched images. The earlier screenshots and cloud recording remain dated historical evidence.

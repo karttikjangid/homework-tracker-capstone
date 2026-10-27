@@ -1,9 +1,9 @@
 frontend:
   image: ghcr.io/karttikjangid/homework-tracker-frontend
-  tag: 2b74cb7f4da3cbb2dccc8faaab52b23c68f46f98
+  tag: 3ed8bf722561b28c71d1e3861dcbc741bd3ff4b1
 backend:
   image: ghcr.io/karttikjangid/homework-tracker-backend
-  tag: 2b74cb7f4da3cbb2dccc8faaab52b23c68f46f98
+  tag: 3ed8bf722561b28c71d1e3861dcbc741bd3ff4b1
 replicaCount: 2
 postgres:
   host: postgres

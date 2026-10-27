@@ -1,7 +1,3 @@
-frontend:
-  image: ghcr.io/karttikjangid/session21-frontend
-backend:
-  image: ghcr.io/karttikjangid/session21-backend
 replicaCount: 2
 ingress:
   enabled: true

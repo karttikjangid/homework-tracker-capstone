@@ -18,3 +18,5 @@ The [27 October blocked run](https://github.com/karttikjangid/homework-tracker-c
 The [Redis timeout run](https://github.com/karttikjangid/homework-tracker-capstone/actions/runs/40449983349) passed both image scans and the primary application checks. Its logs establish Redis unavailability, but do not identify the underlying Redis startup or networking failure. The earlier image-security fix remains in place.
 
 The [diagnostic rerun](https://github.com/karttikjangid/homework-tracker-capstone/actions/runs/40451605703) confirmed `ImagePullBackOff` with HTTP 429 from `public.ecr.aws` for Redis. The disposable CI cluster now preloads official `redis:8.2.3-alpine` from Docker Hub, retaining the version, authentication and NetworkPolicy.
+
+The [patched rerun](https://github.com/karttikjangid/homework-tracker-capstone/actions/runs/40482257507) passed the full pipeline with both image gates enabled. Production values now inherit the current capstone package names instead of overriding them with the earlier coursework package names.

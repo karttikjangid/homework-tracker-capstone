@@ -21,14 +21,7 @@ terraform -chdir=terraform apply
 
 Follow the [cluster connection steps](../terraform/README.md#connect-to-k3s-for-a-presentation) to set `VM_IP`, `SSH_KEY` and `KUBECONFIG`. Keep the SSH tunnel open.
 
-For optional offline replay, download the release archive and import it on the K3s node. It contains Linux/AMD64 images for the Azure VM:
-
-```bash
-curl -fLO https://github.com/karttikjangid/homework-tracker-capstone/releases/download/v1.0.0/homework-tracker-images.tar.gz
-scp -i "$SSH_KEY" homework-tracker-images.tar.gz student@"$VM_IP":/tmp/
-ssh -i "$SSH_KEY" student@"$VM_IP" \
-  'sudo k3s ctr -n k8s.io images import /tmp/homework-tracker-images.tar.gz'
-```
+The chart pulls the approved patched images from public GHCR. The v1.0.0 image archive is historical and predates the 27 October security update; it is not used for the current deployment.
 
 The [Helm chart](../helm/taskboard) includes two frontend replicas and two to four backend replicas, database storage, ConfigMap, Secret, probes, Ingress and CPU autoscaling. Alembic applies schema changes under a PostgreSQL advisory lock.
 

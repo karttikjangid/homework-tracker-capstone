@@ -86,7 +86,7 @@ spec:
           command: ["sh", "-c", "until pg_isready -h postgres -U taskboard -d taskboard; do sleep 2; done"]
       containers:
         - name: backend
-          image: "ghcr.io/karttikjangid/homework-tracker-backend:2b74cb7f4da3cbb2dccc8faaab52b23c68f46f98"
+          image: "ghcr.io/karttikjangid/homework-tracker-backend:3ed8bf722561b28c71d1e3861dcbc741bd3ff4b1"
           imagePullPolicy: IfNotPresent
           ports: [{containerPort: 8000}]
           securityContext:
@@ -125,7 +125,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: "ghcr.io/karttikjangid/homework-tracker-frontend:2b74cb7f4da3cbb2dccc8faaab52b23c68f46f98"
+        image: "ghcr.io/karttikjangid/homework-tracker-frontend:3ed8bf722561b28c71d1e3861dcbc741bd3ff4b1"
         securityContext:
           runAsNonRoot: true
           runAsUser: 101

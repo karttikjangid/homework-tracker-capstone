@@ -81,7 +81,7 @@ Public images:
 - `ghcr.io/karttikjangid/homework-tracker-backend`
 - `ghcr.io/karttikjangid/homework-tracker-frontend`
 
-The chart pins the approved application SHA `2b74cb7f4da3cbb2dccc8faaab52b23c68f46f98`. The [v1.0.0 release](https://github.com/karttikjangid/homework-tracker-capstone/releases/tag/v1.0.0) includes an offline image archive, checksums and the recorded walkthrough.
+The chart pins the patched application SHA `3ed8bf722561b28c71d1e3861dcbc741bd3ff4b1`, verified by the [27 October pipeline](https://github.com/karttikjangid/homework-tracker-capstone/actions/runs/40482257507). The [v1.0.0 release](https://github.com/karttikjangid/homework-tracker-capstone/releases/tag/v1.0.0) retains the original image archive, checksums and walkthrough. Its images predate the 27 October security update.
 
 ## Verification
 
@@ -115,7 +115,7 @@ The 17-slide presentation includes an architecture diagram and key learnings. Th
 
 ## Project context
 
-This capstone extends the instructor's [TaskBoard starter](https://github.com/Nency-Ravaliya/devops-heros/tree/main/session21-python) with assignment-specific fields, migrations, validation and browser error handling. It was developed with coding-assistant support.
+This capstone extends the instructor's [TaskBoard starter](https://github.com/Nency-Ravaliya/devsecops-python) with assignment-specific fields, migrations, validation and browser error handling. It was developed with coding-assistant support.
 
 Azure/K3s replaces the reference rubric's AWS/EKS architecture; instructor acceptance of this substitution is not recorded. The [requirements mapping](docs/course/requirements.md) records the difference.
 
