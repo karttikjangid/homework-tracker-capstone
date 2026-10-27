@@ -155,9 +155,12 @@ jobs:
                 docker pull "$image"
                 kind load docker-image "$image" --name chart-testing
               done
+          # Preload the official Redis image to avoid the public ECR mirror's rate limit.
+          docker pull redis:8.2.3-alpine
+          kind load docker-image redis:8.2.3-alpine --name chart-testing
           kubectl create namespace argocd
           kubectl apply --server-side -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/v3.5.5/manifests/core-install.yaml
-          kubectl -n argocd patch deployment argocd-redis --type=strategic -p '{"spec":{"template":{"spec":{"containers":[{"name":"redis","readinessProbe":{"tcpSocket":{"port":6379},"periodSeconds":2,"timeoutSeconds":1}}]}}}}'
+          kubectl -n argocd patch deployment argocd-redis --type=strategic -p '{"spec":{"template":{"spec":{"containers":[{"name":"redis","image":"redis:8.2.3-alpine","imagePullPolicy":"IfNotPresent","readinessProbe":{"tcpSocket":{"port":6379},"periodSeconds":2,"timeoutSeconds":1}}]}}}}'
           kubectl -n argocd rollout status deployment/argocd-redis --timeout=180s
           kubectl -n argocd exec deployment/argocd-redis -c redis -- sh -c 'REDISCLI_AUTH="$REDIS_PASSWORD" redis-cli -h 127.0.0.1 ping' | grep -qx PONG
           kubectl -n argocd rollout status statefulset/argocd-application-controller --timeout=180s
