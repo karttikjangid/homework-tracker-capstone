@@ -104,7 +104,7 @@ The chart pins the approved application SHA `2b74cb7f4da3cbb2dccc8faaab52b23c68f
 
 [Slides (PDF)](demo/slides.pdf) · [PowerPoint](demo/presentation.pptx) · [Video preview](https://github.com/karttikjangid/homework-tracker-capstone/releases/download/demo-2026-10-26/presentation-video.mp4)
 
-The 17-slide presentation includes an architecture diagram and key learnings. The captioned preview combines the slides, a codebase tour and the recorded deployment demonstrations. Voice narration is pending. [Demo details and recording script](demo/README.md).
+The 17-slide presentation includes an architecture diagram and key learnings. The captioned preview combines the slides, a codebase tour and the recorded deployment demonstrations. Voice narration is pending. [Demo details](demo/README.md).
 
 ## Documentation
 
