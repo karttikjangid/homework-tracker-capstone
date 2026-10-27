@@ -146,7 +146,7 @@ jobs:
           GRAFANA_PASSWORD=$(kubectl -n session21-monitoring get secret session21-grafana -o jsonpath='{.data.admin-password}' | base64 -d) NODE_PATH=/tmp/session21-browser/node_modules node scripts/capture-monitoring.cjs
       - name: GitOps reconciliation demo
         run: |
-          trap 'kubectl -n argocd get applications,appprojects -o yaml; kubectl -n argocd logs statefulset/argocd-application-controller --tail=100; kubectl -n session21-gitops get pods,events -o wide' ERR
+          trap 'kubectl -n argocd get pods,svc,endpointslices -o wide; kubectl -n argocd get events --sort-by=.lastTimestamp; kubectl -n argocd describe pods -l app.kubernetes.io/name=argocd-redis; kubectl -n argocd get applications,appprojects -o yaml; kubectl -n argocd logs statefulset/argocd-application-controller --tail=100; kubectl -n session21-gitops get pods,events -o wide' ERR
           # Preload the promoted images using the registry login above.
           # This also supports private GHCR packages in the disposable cluster.
           helm template homework ./helm/taskboard -f helm/taskboard/values-gitops.yaml \
@@ -157,6 +157,9 @@ jobs:
               done
           kubectl create namespace argocd
           kubectl apply --server-side -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/v3.5.5/manifests/core-install.yaml
+          kubectl -n argocd patch deployment argocd-redis --type=strategic -p '{"spec":{"template":{"spec":{"containers":[{"name":"redis","readinessProbe":{"tcpSocket":{"port":6379},"periodSeconds":2,"timeoutSeconds":1}}]}}}}'
+          kubectl -n argocd rollout status deployment/argocd-redis --timeout=180s
+          kubectl -n argocd exec deployment/argocd-redis -c redis -- sh -c 'REDISCLI_AUTH="$REDIS_PASSWORD" redis-cli -h 127.0.0.1 ping' | grep -qx PONG
           kubectl -n argocd rollout status statefulset/argocd-application-controller --timeout=180s
           kubectl -n argocd rollout status deployment/argocd-repo-server --timeout=180s
           kubectl apply -f gitops/project.yaml
